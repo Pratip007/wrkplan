@@ -21,7 +21,7 @@ interface HeroData {
 })
 export class HomeComponent implements OnInit, OnDestroy {
   currentTab = 'dcaa-compliance';
-  currentSolutionsTab = 'overview';
+      currentSolutionsTab = 'overview';
   expandedSections: { [key: string]: boolean } = {};
 
   // Video section properties
@@ -107,126 +107,75 @@ export class HomeComponent implements OnInit, OnDestroy {
       ],
       image: '/assects/home/hero/erpDashboard.jpg'
     },
-    finance: {
-      description: 'Explore the WrkPlan solutions that help <strong style="color: #0a182e;">CFOs</strong>, <strong>Finance leaders</strong>, <strong style="color: #0a182e;">Project Managers</strong> and their teams to influence strategy, create value and enable better data-driven decision-making.',
-      sections: [
-        {
-          id: 'finance-budgeting',
-          title: 'Project budgeting and billing',
-                      description: 'As part of WrkPlan ERP, projects are fully integrated with finance, accounting, procurement and payroll for clear financial visibility and planning across them – in a single view. Manage the entire project cycle from contract award to final invoice and project close-down.'
-        },
-        {
-          id: 'finance-planning',
-          title: 'Integrated financial planning',
-          description: 'Comprehensive financial planning tools that integrate with project management for accurate forecasting and budget allocation across all government contracts.'
-        },
-        {
-          id: 'finance-accounting',
-          title: 'Cost accounting & reporting',
-          description: 'DCAA-compliant cost accounting with automated indirect rate calculations, comprehensive reporting, and real-time cost tracking.'
-        },
-        {
-          id: 'finance-budget',
-          title: 'Budget management',
-          description: 'Advanced budget management capabilities with variance analysis, approval workflows, and integration with contract funding sources.'
-        },
-        {
-          id: 'finance-analytics',
-          title: 'Financial analytics',
-          description: 'Powerful financial analytics and reporting tools providing insights into project profitability, cash flow, and financial performance.'
-        }
-      ],
-      image: '/assects/home/hero/erpDashboard.jpg'
-    },
     contracts: {
-      description: 'Streamline your contract lifecycle management with <strong style="color: #0a182e;">Contract leaders</strong>, <strong>Procurement teams</strong>, <strong style="color: #0a182e;">Legal departments</strong> and their teams to ensure compliance and maximize contract value.',
+      description: 'Gain full control and visibility of all your contracts with an easy-to-use, all-in-one solution.',
       sections: [
         {
           id: 'contracts-management',
-          title: 'Government contract management',
-          description: 'Manage multiple government contracts with different requirements, funding sources, and compliance needs. From contract award to closeout, track every aspect including CLINs, modifications, and subcontractor agreements in one integrated platform.'
+          title: 'Contract Management',
+          description: 'Gain full control and visibility of all your contracts with an easy-to-use, all-in-one solution.'
         },
         {
-          id: 'contracts-subcontractor',
-          title: 'Subcontractor management',
-          description: 'Comprehensive subcontractor management with performance tracking, compliance monitoring, and integrated payment processing.'
+          id: 'contracts-purchasing',
+          title: 'Purchasing and Inventory',
+          description: 'Streamline procurement processes and manage inventory efficiently across all your government contracts.'
         },
         {
-          id: 'contracts-clin',
-          title: 'CLIN tracking & management',
-          description: 'Advanced CLIN management capabilities with automated tracking, funding allocation, and performance monitoring across all contract line items.'
-        },
-        {
-          id: 'contracts-modifications',
-          title: 'Contract modifications',
-          description: 'Streamlined contract modification processes with approval workflows, change tracking, and automated documentation.'
-        },
-        {
-          id: 'contracts-funding',
-          title: 'Funding allocation',
-          description: 'Intelligent funding allocation tools with real-time visibility into contract funding, burn rates, and remaining balances.'
+          id: 'contracts-opportunity',
+          title: 'Opportunity Management',
+          description: 'Track and manage business opportunities from initial identification through contract award.'
         }
       ],
       image: '/assects/home/hero/erpDashboard.jpg'
     },
-    compliance: {
-      description: 'Ensure DCAA compliance with <strong style="color: #0a182e;">Compliance officers</strong>, <strong>Audit teams</strong>, <strong style="color: #0a182e;">Finance leaders</strong> and their teams to maintain audit readiness and regulatory compliance.',
+    finance: {
+      description: 'Manage your transactions, costs, and revenue in one fully-integrated system.',
       sections: [
         {
-          id: 'compliance-monitoring',
-          title: 'Automated compliance monitoring',
-          description: 'Built-in DCAA compliance features ensure your accounting system meets all federal requirements. Automated cost segregation, audit trails, and real-time compliance monitoring help you stay audit-ready with pre-configured chart of accounts and indirect cost pools.'
+          id: 'finance-project',
+          title: 'Project Accounting',
+          description: 'Comprehensive project accounting with real-time cost tracking, revenue recognition, and financial reporting across all government contracts.'
         },
         {
-          id: 'compliance-audit',
-          title: 'Audit trail management',
-          description: 'Comprehensive audit trail management with detailed transaction history, user activity tracking, and automated documentation for audit readiness.'
+          id: 'finance-rates',
+          title: 'Indirect Rates',
+          description: 'Automated indirect rate calculations and management to ensure DCAA compliance and accurate cost allocation.'
         },
         {
-          id: 'compliance-segregation',
-          title: 'Cost segregation',
-          description: 'Automated cost segregation capabilities ensuring proper allocation of direct and indirect costs in compliance with federal regulations.'
+          id: 'finance-incurred',
+          title: 'Incurred Cost Submission',
+          description: 'Streamlined preparation and submission of incurred cost proposals with built-in compliance features.'
         },
         {
-          id: 'compliance-rates',
-          title: 'Indirect rate calculations',
-          description: 'Automated indirect rate calculations with real-time updates, compliance validation, and integration with proposal pricing tools.'
-        },
-        {
-          id: 'compliance-preparation',
-          title: 'Audit preparation',
-          description: 'Comprehensive audit preparation tools with automated report generation, compliance checking, and documentation management for DCAA audits.'
+          id: 'finance-budgeting',
+          title: 'Budgeting and Forecasting',
+          description: 'Advanced budgeting and forecasting tools with scenario planning and variance analysis for better financial control.'
         }
       ],
       image: '/assects/home/hero/erpDashboard.jpg'
     },
-    operations: {
-      description: 'Optimize your operations with <strong style="color: #0a182e;">Operations leaders</strong>, <strong>Project managers</strong>, <strong style="color: #0a182e;">Resource managers</strong> and their teams to streamline processes and improve efficiency.',
+    workforce: {
+      description: 'Manage timesheets and expenses, as well as sub-contractors, in compliance with DCAA.',
       sections: [
         {
-          id: 'operations-time',
-          title: 'Time & expense management',
-          description: 'Streamline time tracking and expense management with DCAA-compliant timesheets, mobile accessibility, and supervisor approval workflows. Integrate seamlessly with payroll and project accounting for complete operational visibility.'
+          id: 'workforce-time',
+          title: 'Time and Expense',
+          description: 'DCAA-compliant time tracking and expense management with mobile accessibility and supervisor approval workflows.'
         },
         {
-          id: 'operations-resource',
-          title: 'Resource planning & allocation',
-          description: 'Advanced resource planning tools with capacity management, skill tracking, and automated allocation based on project requirements and availability.'
+          id: 'workforce-payroll',
+          title: 'Payroll Integration',
+          description: 'Seamless integration with payroll systems for accurate time and expense processing and reporting.'
         },
         {
-          id: 'operations-workforce',
-          title: 'Workforce management',
-          description: 'Comprehensive workforce management with employee tracking, performance monitoring, and integration with HR systems for complete operational oversight.'
+          id: 'workforce-employee',
+          title: 'Employee Management',
+          description: 'Comprehensive employee management with performance tracking, skill management, and compliance monitoring.'
         },
         {
-          id: 'operations-planning',
-          title: 'Project planning',
-          description: 'Integrated project planning capabilities with Gantt charts, milestone tracking, and resource allocation for successful project delivery.'
-        },
-        {
-          id: 'operations-tracking',
-          title: 'Performance tracking',
-          description: 'Real-time performance tracking with KPI monitoring, automated reporting, and dashboard views for operational excellence and continuous improvement.'
+          id: 'workforce-subcontractor',
+          title: 'Sub-Contractor Management',
+          description: 'Streamlined subcontractor management with performance tracking, compliance monitoring, and payment processing.'
         }
       ],
       image: '/assects/home/hero/erpDashboard.jpg'
@@ -263,18 +212,18 @@ export class HomeComponent implements OnInit, OnDestroy {
         'Streamline CLIN management and modification tracking'
       ]
     },
-    'project-accounting': {
-      headline: 'Accelerate Your ROI<br>with WrkPlan',
-      subheadline: 'Transform manual billing into automated accuracy.',
-      description: 'Simplify processes and control costs with our integrated platform. Streamline your financial operations with real-time insights and automated reporting capabilities.',
-      primaryButton: 'Talk to Sales',
-      secondaryButton: 'Learn More',
-      additionalLink: 'See WrkPlan ERP demos',
+    'workforce-management': {
+      headline: 'Streamline Your Workforce<br>Management',
+      subheadline: 'DCAA-compliant time tracking and employee management.',
+      description: 'Manage timesheets, expenses, and subcontractors in compliance with DCAA requirements. Streamline your workforce operations with integrated payroll and performance tracking.',
+      primaryButton: 'Schedule Demo',
+      secondaryButton: 'See Workforce Features',
+      additionalLink: 'Read our blog: How SYSTOLIC Inc. achieved 94% faster invoicing',
       image: '/assects/home/hero/AdobeStock_974539324.jpeg',
       bulletPoints: [
-        'Automated cost ledger creation',
-        'Government invoice generation in minutes',
-        'Live P&L by project'
+        'DCAA-compliant time tracking and expense management',
+        'Seamless payroll integration and employee management',
+        'Comprehensive subcontractor oversight and compliance'
       ]
     }
   };
@@ -327,7 +276,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   private startAutoRotation() {
-    const tabKeys = ['dcaa-compliance', 'contract-management', 'project-accounting'];
+    const tabKeys = ['dcaa-compliance', 'contract-management', 'workforce-management'];
     let currentIndex = 0;
 
     this.autoRotateInterval = setInterval(() => {
@@ -371,5 +320,68 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   playVideo() {
     alert('Video would play here - integrate with your video player of choice');
+  }
+
+  // Carousel functionality for insights section
+  currentInsightsPage = 0;
+  totalInsightsPages = 5;
+
+  goToInsightsPage(page: number) {
+    if (page >= 0 && page < this.totalInsightsPages) {
+      this.currentInsightsPage = page;
+      this.updateInsightsCarousel();
+    }
+  }
+
+  nextInsightsPage() {
+    if (this.currentInsightsPage < this.totalInsightsPages - 1) {
+      this.goToInsightsPage(this.currentInsightsPage + 1);
+    }
+  }
+
+  prevInsightsPage() {
+    if (this.currentInsightsPage > 0) {
+      this.goToInsightsPage(this.currentInsightsPage - 1);
+    }
+  }
+
+    private updateInsightsCarousel() {
+    const container = document.getElementById('cards-container');
+    if (container) {
+      const translateX = -this.currentInsightsPage * 100;
+      container.style.transform = `translateX(${translateX}%)`;
+    }
+  }
+
+      ngAfterViewInit() {
+    // Add touch/swipe support for mobile
+    setTimeout(() => {
+      this.setupTouchSupport();
+    }, 100);
+  }
+
+  private setupTouchSupport() {
+    const container = document.getElementById('cards-container');
+    if (container) {
+      let startX = 0;
+      let endX = 0;
+
+      container.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+      });
+
+      container.addEventListener('touchend', (e) => {
+        endX = e.changedTouches[0].clientX;
+        const diff = startX - endX;
+
+        if (Math.abs(diff) > 50) { // Minimum swipe distance
+          if (diff > 0) {
+            this.nextInsightsPage(); // Swipe left - go to next page
+          } else {
+            this.prevInsightsPage(); // Swipe right - go to previous page
+          }
+        }
+      });
+    }
   }
 }

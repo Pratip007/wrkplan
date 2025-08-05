@@ -96,18 +96,18 @@
 
             <button
                 class="tab-button text-left p-4 rounded-lg transition-all duration-300 relative"
-                [class.bg-[#d2fae5]]="currentTab === 'project-accounting'"
-                [class.bg-white]="currentTab !== 'project-accounting'"
-                [class.active]="currentTab === 'project-accounting'"
-                (click)="switchTab('project-accounting')"
+                [class.bg-[#d2fae5]]="currentTab === 'workforce-management'"
+                [class.bg-white]="currentTab !== 'workforce-management'"
+                [class.active]="currentTab === 'workforce-management'"
+                (click)="switchTab('workforce-management')"
             >
                 <div class="absolute left-0 top-0 w-1 rounded-l-lg tab-indicator transition-all duration-500"
-                     [class.bg-[#074e94]]="currentTab === 'project-accounting'"
-                     [class.bg-transparent]="currentTab !== 'project-accounting'"
-                     [style.height]="getProgressBarHeight('project-accounting')">
+                     [class.bg-[#074e94]]="currentTab === 'workforce-management'"
+                     [class.bg-transparent]="currentTab !== 'workforce-management'"
+                     [style.height]="getProgressBarHeight('workforce-management')">
                 </div>
-                <h3 class="font-semibold text-gray-900 mb-1 text-sm">Project Accounting & Reporting</h3>
-                <p class="text-xs text-gray-600">Real-time financial insights and automated reporting</p>
+                <h3 class="font-semibold text-gray-900 mb-1 text-sm">Workforce Management</h3>
+                <p class="text-xs text-gray-600">DCAA-compliant time tracking and employee management</p>
             </button>
         </div>
     </div>
@@ -154,20 +154,6 @@
             </button>
             <button
                 class="flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-200"
-                [class.bg-[#d2fae5]]="currentSolutionsTab === 'finance'"
-                [class.text-wrkplan-dark]="currentSolutionsTab === 'finance'"
-                [class.bg-white]="currentSolutionsTab !== 'finance'"
-                [class.text-gray-600]="currentSolutionsTab !== 'finance'"
-                [class.hover:bg-gray-50]="currentSolutionsTab !== 'finance'"
-                (click)="switchSolutionsTab('finance')"
-            >
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                </svg>
-                Finance
-            </button>
-            <button
-                class="flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-200"
                 [class.bg-[#d2fae5]]="currentSolutionsTab === 'contracts'"
                 [class.text-wrkplan-dark]="currentSolutionsTab === 'contracts'"
                 [class.bg-white]="currentSolutionsTab !== 'contracts'"
@@ -178,36 +164,35 @@
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                 </svg>
-                Contracts
+                Contract Management
             </button>
             <button
                 class="flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-200"
-                [class.bg-[#d2fae5]]="currentSolutionsTab === 'compliance'"
-                [class.text-wrkplan-dark]="currentSolutionsTab === 'compliance'"
-                [class.bg-white]="currentSolutionsTab !== 'compliance'"
-                [class.text-gray-600]="currentSolutionsTab !== 'compliance'"
-                [class.hover:bg-gray-50]="currentSolutionsTab !== 'compliance'"
-                (click)="switchSolutionsTab('compliance')"
+                [class.bg-[#d2fae5]]="currentSolutionsTab === 'finance'"
+                [class.text-wrkplan-dark]="currentSolutionsTab === 'finance'"
+                [class.bg-white]="currentSolutionsTab !== 'finance'"
+                [class.text-gray-600]="currentSolutionsTab !== 'finance'"
+                [class.hover:bg-gray-50]="currentSolutionsTab !== 'finance'"
+                (click)="switchSolutionsTab('finance')"
             >
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                 </svg>
-                Compliance
+                Financial Management
             </button>
             <button
                 class="flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-200"
-                [class.bg-[#d2fae5]]="currentSolutionsTab === 'operations'"
-                [class.text-wrkplan-dark]="currentSolutionsTab === 'operations'"
-                [class.bg-white]="currentSolutionsTab !== 'operations'"
-                [class.text-gray-600]="currentSolutionsTab !== 'operations'"
-                [class.hover:bg-gray-50]="currentSolutionsTab !== 'operations'"
-                (click)="switchSolutionsTab('operations')"
+                [class.bg-[#d2fae5]]="currentSolutionsTab === 'workforce'"
+                [class.text-wrkplan-dark]="currentSolutionsTab === 'workforce'"
+                [class.bg-white]="currentSolutionsTab !== 'workforce'"
+                [class.text-gray-600]="currentSolutionsTab !== 'workforce'"
+                [class.hover:bg-gray-50]="currentSolutionsTab !== 'workforce'"
+                (click)="switchSolutionsTab('workforce')"
             >
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                 </svg>
-                Operations
+                Workforce Management
             </button>
         </div>
 
@@ -279,22 +264,31 @@
                 At WrkPlan, we specialize in ERP solutions for government contractors, where <span class="font-semibold">DCAA compliance</span> and <span class="font-semibold">operational excellence</span> make the difference.
             </p>
             <div class="flex flex-wrap justify-center gap-4 mb-12">
-                <button class="px-6 py-3 rounded-lg font-medium transition-all duration-200" [ngClass]="{
+                <button class="flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-200" [ngClass]="{
                     'bg-[#d2fae5] text-gray-900': currentVideoCategory === 'federal',
                     'bg-white text-gray-600 hover:bg-gray-50': currentVideoCategory !== 'federal'
                 }" (click)="switchVideoCategory('federal')">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                    </svg>
                     Federal Contractors
                 </button>
-                <button class="px-6 py-3 rounded-lg font-medium transition-all duration-200" [ngClass]="{
+                <button class="flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-200" [ngClass]="{
                     'bg-[#d2fae5] text-gray-900': currentVideoCategory === 'defense',
                     'bg-white text-gray-600 hover:bg-gray-50': currentVideoCategory !== 'defense'
                 }" (click)="switchVideoCategory('defense')">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                    </svg>
                     Defense Contractors
                 </button>
-                <button class="px-6 py-3 rounded-lg font-medium transition-all duration-200" [ngClass]="{
+                <button class="flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-200" [ngClass]="{
                     'bg-[#d2fae5] text-gray-900': currentVideoCategory === 'consulting',
                     'bg-white text-gray-600 hover:bg-gray-50': currentVideoCategory !== 'consulting'
                 }" (click)="switchVideoCategory('consulting')">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    </svg>
                     Consulting Services
                 </button>
             </div>
@@ -325,23 +319,23 @@
             </div>
         </div>
         <div class="flex flex-wrap justify-center items-center gap-12 lg:gap-16 mb-16">
-            <div class="h-16 flex items-center">
-                <img src="/assects/home/testimonials/GSA.svg" alt="GSA" class="h-12 object-contain">
+            <div class="h-20 flex items-center">
+                <img src="/assects/home/testimonials/GSA.svg" alt="GSA" class="h-16 object-contain">
             </div>
-            <div class="h-16 flex items-center">
-                <img src="/assects/home/testimonials/DCMA.PNG" alt="DCMA" class="h-12 object-contain">
+            <div class="h-20 flex items-center">
+                <img src="/assects/home/testimonials/DCMA.PNG" alt="DCMA" class="h-16 object-contain">
             </div>
-            <div class="h-16 flex items-center">
-                <img src="/assects/home/testimonials/DFARS.png" alt="DFARS" class="h-12 object-contain">
+            <div class="h-20 flex items-center">
+                <img src="/assects/home/testimonials/DFARS.png" alt="DFARS" class="h-16 object-contain">
             </div>
-            <div class="h-16 flex items-center">
-                <img src="/assects/home/testimonials/Defense_Contract_Audit_Agency.jpg" alt="Defense Contract Audit Agency" class="h-12 object-contain">
+            <div class="h-20 flex items-center">
+                <img src="/assects/home/testimonials/Defense_Contract_Audit_Agency.jpg" alt="Defense Contract Audit Agency" class="h-16 object-contain">
             </div>
-            <div class="h-16 flex items-center">
-                <img src="/assects/home/testimonials/US Defense.png" alt="US Defense" class="h-12 object-contain">
+            <div class="h-20 flex items-center">
+                <img src="/assects/home/testimonials/US Defense.png" alt="US Defense" class="h-16 object-contain">
             </div>
-            <div class="h-16 flex items-center">
-                <img src="/assects/home/testimonials/Fedral government.jpeg" alt="Federal Government" class="h-12 object-contain">
+            <div class="h-20 flex items-center">
+                <img src="/assects/home/testimonials/Fedral government.jpeg" alt="Federal Government" class="h-16 object-contain">
             </div>
         </div>
         <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
@@ -355,6 +349,449 @@
                 </svg>
                 Watch on-demand demos
             </button>
+        </div>
+    </div>
+</section>
+
+<!-- Latest Insights Section -->
+<section class="py-16 lg:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+                Latest insights and resources
+            </h2>
+        </div>
+
+        <!-- Cards Container -->
+        <div class="relative">
+            <!-- Cards Wrapper with Overflow Hidden -->
+            <div class="overflow-hidden">
+                <div id="cards-container" class="flex transition-transform duration-500 ease-in-out bg-transparent">
+                    <!-- Card Set 1 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 min-w-full">
+                        <!-- Card 1: eBook -->
+                        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[500px]">
+                            <div class="aspect-video bg-gradient-to-br from-emerald-100 to-emerald-200 relative overflow-hidden">
+                                <img src="/placeholder.svg?height=200&width=300&text=DCAA+Compliance+Guide+Cover" alt="DCAA Compliance Guide" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-8 flex flex-col flex-grow">
+                                <div class="mb-3">
+                                    <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">eBook</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                                    WrkPlan Government Contractor DCAA Compliance Guide
+                                </h3>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+                                    Discover an ERP that's built for government contractors – with the DCAA compliance, audit readiness and financial intelligence your organization needs to keep growing.
+                                </p>
+                                <button class="w-full bg-[#074e94] hover:bg-[#074e94]/90 text-white px-6 py-3 rounded-full font-medium transition-colors duration-200 shadow-lg hover:shadow-xl mt-auto">
+                                    Read our eBook
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Research Report -->
+                        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[500px]">
+                            <div class="aspect-video bg-gradient-to-br from-blue-100 to-blue-200 relative overflow-hidden">
+                                <img src="/placeholder.svg?height=200&width=300&text=Government+Contracting+Survey+Report" alt="Government Contracting Survey" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-8 flex flex-col flex-grow">
+                                <div class="mb-3">
+                                    <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Research report</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                                    Government Contractor ERP Survey 2024
+                                </h3>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+                                    WrkPlan achieves 9 leading positions in the Government Contractor ERP Survey 2024. Users reported remarkable business benefits, with 94% achieving improved invoice processing satisfaction.
+                                </p>
+                                <button class="w-full bg-[#074e94] hover:bg-[#074e94]/90 text-white px-6 py-3 rounded-full font-medium transition-colors duration-200 shadow-lg hover:shadow-xl mt-auto">
+                                    Get the report
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Video -->
+                        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[500px]">
+                            <div class="aspect-video bg-gradient-to-br from-gray-700 to-gray-900 relative overflow-hidden">
+                                <img src="/placeholder.svg?height=200&width=300&text=Business+Meeting+Government+Contractors" alt="Government Contractors Meeting" class="w-full h-full object-cover">
+                                <!-- Play Button Overlay -->
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center shadow-lg hover:bg-emerald-600 transition-colors cursor-pointer">
+                                        <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-8 flex flex-col flex-grow">
+                                <div class="mb-3">
+                                    <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Video</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                                    Imagine a new future with WrkPlan ERP
+                                </h3>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+                                    Discover how WrkPlan has combined Finance, Contract Management and Compliance capabilities with a powerful and secure Cloud-based platform to help your organization thrive.
+                                </p>
+                                <button class="w-full bg-[#074e94] hover:bg-[#074e94]/90 text-white px-6 py-3 rounded-full font-medium transition-colors duration-200 shadow-lg hover:shadow-xl mt-auto">
+                                    Play the video (4:32)
+                                </button>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Card Set 2 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 min-w-full">
+                        <!-- Card 5: Blog -->
+                        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[500px]">
+                            <div class="aspect-video bg-gradient-to-br from-purple-100 to-purple-200 relative overflow-hidden">
+                                <img src="/placeholder.svg?height=200&width=300&text=CFO+Office+Government+Contracting" alt="CFO Office Government Contracting" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-8 flex flex-col flex-grow">
+                                <div class="mb-3">
+                                    <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Blog</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                                    What is the Office of the CFO in Government Contracting?
+                                </h3>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+                                    Dive into the evolving role of the CFO and their team and discover how strategic financial leadership drives growth and resilience in government contracting.
+                                </p>
+                                <button class="w-full bg-[#074e94] hover:bg-[#074e94]/90 text-white px-6 py-3 rounded-full font-medium transition-colors duration-200 shadow-lg hover:shadow-xl mt-auto">
+                                    Read our blog
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Card 6: Resource Page -->
+                        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[500px]">
+                            <div class="aspect-video bg-gradient-to-br from-green-100 to-green-200 relative overflow-hidden">
+                                <img src="/placeholder.svg?height=200&width=300&text=Analyst+Reports+WRKPLAN" alt="Analyst Reports WrkPlan" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-8 flex flex-col flex-grow">
+                                <div class="mb-3">
+                                    <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Resource page</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                                    See what the analysts say about WrkPlan
+                                </h3>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+                                    Get an overview of all current analyst coverage and discover why WrkPlan is recognized as a cutting-edge, service-centric government contractor ERP vendor.
+                                </p>
+                                <button class="w-full bg-[#074e94] hover:bg-[#074e94]/90 text-white px-6 py-3 rounded-full font-medium transition-colors duration-200 shadow-lg hover:shadow-xl mt-auto">
+                                    Read analyst reports
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Card 7: Case Study -->
+                        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[500px]">
+                            <div class="aspect-video bg-gradient-to-br from-orange-100 to-orange-200 relative overflow-hidden">
+                                <img src="/placeholder.svg?height=200&width=300&text=SYSTOLIC+Case+Study" alt="SYSTOLIC Case Study" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-8 flex flex-col flex-grow">
+                                <div class="mb-3">
+                                    <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Case Study</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                                    How SYSTOLIC Inc. achieved 94% faster invoicing
+                                </h3>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+                                    Learn how this fast-growing government contractor transformed their billing process and improved cash flow with WrkPlan's automated invoicing capabilities.
+                                </p>
+                                <button class="w-full bg-[#074e94] hover:bg-[#074e94]/90 text-white px-6 py-3 rounded-full font-medium transition-colors duration-200 shadow-lg hover:shadow-xl mt-auto">
+                                    Read case study
+                                </button>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Card Set 3 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 min-w-full">
+                        <!-- Card 9: White Paper -->
+                        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[500px]">
+                            <div class="aspect-video bg-gradient-to-br from-teal-100 to-teal-200 relative overflow-hidden">
+                                <img src="/placeholder.svg?height=200&width=300&text=Contract+Management+White+Paper" alt="Contract Management White Paper" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="mb-3">
+                                    <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">White Paper</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                                    The Future of Government Contract Management
+                                </h3>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+                                    Explore emerging trends in government contracting and learn how modern ERP solutions are transforming contract lifecycle management for federal contractors.
+                                </p>
+                                <button class="w-full bg-[#074e94] hover:bg-[#074e94]/90 text-white px-6 py-3 rounded-full font-medium transition-colors duration-200 shadow-lg hover:shadow-xl mt-auto">
+                                    Download white paper
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Card 10: Infographic -->
+                        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[500px]">
+                            <div class="aspect-video bg-gradient-to-br from-pink-100 to-pink-200 relative overflow-hidden">
+                                <img src="/placeholder.svg?height=200&width=300&text=DCAA+Compliance+Checklist" alt="DCAA Compliance Checklist" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="mb-3">
+                                    <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Infographic</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                                    DCAA Compliance Checklist: 15 Essential Requirements
+                                </h3>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+                                    A comprehensive visual guide to the 15 most critical DCAA compliance requirements every government contractor must meet to maintain audit readiness.
+                                </p>
+                                <button class="w-full bg-[#074e94] hover:bg-[#074e94]/90 text-white px-6 py-3 rounded-full font-medium transition-colors duration-200 shadow-lg hover:shadow-xl mt-auto">
+                                    View infographic
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Card 11: Podcast -->
+                        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[500px]">
+                            <div class="aspect-video bg-gradient-to-br from-yellow-100 to-yellow-200 relative overflow-hidden">
+                                <img src="/placeholder.svg?height=200&width=300&text=Government+Contracting+Podcast" alt="Government Contracting Podcast" class="w-full h-full object-cover">
+                                <!-- Play Button Overlay -->
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center shadow-lg hover:bg-emerald-600 transition-colors cursor-pointer">
+                                        <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="mb-3">
+                                    <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Podcast</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                                    Scaling Your Government Contracting Business
+                                </h3>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+                                    Listen to industry experts discuss proven strategies for growing your government contracting business while maintaining compliance and operational efficiency.
+                                </p>
+                                <button class="w-full bg-[#074e94] hover:bg-[#074e94]/90 text-white px-6 py-3 rounded-full font-medium transition-colors duration-200 shadow-lg hover:shadow-xl mt-auto">
+                                    Listen to podcast (28:45)
+                                </button>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Card Set 4 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 min-w-full">
+                        <!-- Card 13: Guide -->
+                        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[500px]">
+                            <div class="aspect-video bg-gradient-to-br from-red-100 to-red-200 relative overflow-hidden">
+                                <img src="/placeholder.svg?height=200&width=300&text=Cost+Accounting+Guide" alt="Cost Accounting Guide" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="mb-3">
+                                    <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Guide</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                                    Cost Accounting Standards for Government Contractors
+                                </h3>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+                                    Master the essential cost accounting standards that every government contractor must understand to maintain compliance and maximize profitability.
+                                </p>
+                                <button class="w-full bg-[#074e94] hover:bg-[#074e94]/90 text-white px-6 py-3 rounded-full font-medium transition-colors duration-200 shadow-lg hover:shadow-xl mt-auto">
+                                    Download guide
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Card 14: Webinar -->
+                        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[500px]">
+                            <div class="aspect-video bg-gradient-to-br from-cyan-100 to-cyan-200 relative overflow-hidden">
+                                <img src="/placeholder.svg?height=200&width=300&text=Time+Tracking+Webinar" alt="Time Tracking Webinar" class="w-full h-full object-cover">
+                                <!-- Play Button Overlay -->
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center shadow-lg hover:bg-emerald-600 transition-colors cursor-pointer">
+                                        <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-8 flex flex-col flex-grow">
+                                <div class="mb-3">
+                                    <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Webinar</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                                    Time Tracking Best Practices for Government Contracts
+                                </h3>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+                                    Learn proven time tracking methodologies that ensure accurate labor reporting and maintain DCAA compliance across all your government contracts.
+                                </p>
+                                <button class="w-full bg-[#074e94] hover:bg-[#074e94]/90 text-white px-6 py-3 rounded-full font-medium transition-colors duration-200 shadow-lg hover:shadow-xl mt-auto">
+                                    Watch webinar (38:15)
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Card 15: Case Study -->
+                        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[500px]">
+                            <div class="aspect-video bg-gradient-to-br from-violet-100 to-violet-200 relative overflow-hidden">
+                                <img src="/placeholder.svg?height=200&width=300&text=Defense+Solutions+Case+Study" alt="Defense Solutions Case Study" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-8 flex flex-col flex-grow">
+                                <div class="mb-3">
+                                    <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Case Study</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                                    How Defense Solutions Inc. Reduced Audit Time by 60%
+                                </h3>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+                                    Discover how this defense contractor streamlined their audit preparation process and achieved unprecedented efficiency with WrkPlan's integrated platform.
+                                </p>
+                                <button class="w-full bg-[#074e94] hover:bg-[#074e94]/90 text-white px-6 py-3 rounded-full font-medium transition-colors duration-200 shadow-lg hover:shadow-xl mt-auto">
+                                    Read case study
+                                </button>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Card Set 5 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 min-w-full">
+                        <!-- Card 17: Report -->
+                        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[500px]">
+                            <div class="aspect-video bg-gradient-to-br from-lime-100 to-lime-200 relative overflow-hidden">
+                                <img src="/placeholder.svg?height=200&width=300&text=Industry+Trends+Report" alt="Industry Trends Report" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="mb-3">
+                                    <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Report</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                                    2024 Government Contracting Industry Trends
+                                </h3>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+                                    Stay ahead of the curve with our comprehensive analysis of emerging trends, regulatory changes, and opportunities in government contracting.
+                                </p>
+                                <button class="w-full bg-[#074e94] hover:bg-[#074e94]/90 text-white px-6 py-3 rounded-full font-medium transition-colors duration-200 shadow-lg hover:shadow-xl mt-auto">
+                                    Get the report
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Card 18: Video -->
+                        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[500px]">
+                            <div class="aspect-video bg-gradient-to-br from-rose-100 to-rose-200 relative overflow-hidden">
+                                <img src="/placeholder.svg?height=200&width=300&text=Customer+Success+Story" alt="Customer Success Story" class="w-full h-full object-cover">
+                                <!-- Play Button Overlay -->
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center shadow-lg hover:bg-emerald-600 transition-colors cursor-pointer">
+                                        <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-8 flex flex-col flex-grow">
+                                <div class="mb-3">
+                                    <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Video</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                                    Customer Success: Federal Consulting Group
+                                </h3>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+                                    Hear directly from Federal Consulting Group about their transformation journey and the measurable impact WrkPlan has had on their operations.
+                                </p>
+                                <button class="w-full bg-[#074e94] hover:bg-[#074e94]/90 text-white px-6 py-3 rounded-full font-medium transition-colors duration-200 shadow-lg hover:shadow-xl mt-auto">
+                                    Watch video (5:42)
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Card 19: Training -->
+                        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[500px]">
+                            <div class="p-8 flex flex-col justify-center items-center text-center flex-grow">
+                                <div class="mb-6">
+                                    <svg class="w-16 h-16 text-gray-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-4 leading-tight">
+                                    Ready to master WrkPlan?
+                                </h3>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-8 flex-grow">
+                                    Enroll in our comprehensive training program designed to help your team maximize the value of WrkPlan's powerful features.
+                                </p>
+                                <button class="w-full bg-[#074e94] hover:bg-[#074e94]/90 text-white px-6 py-3 rounded-full font-medium transition-colors duration-200 shadow-lg hover:shadow-xl mt-auto">
+                                    Start training
+                                </button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="flex justify-between items-center mt-8">
+                <!-- Progress Indicator -->
+                <div class="flex space-x-2">
+                    <div
+                        (click)="goToInsightsPage(0)"
+                        class="w-8 h-1 rounded-full cursor-pointer"
+                        [class]="currentInsightsPage === 0 ? 'bg-emerald-500' : 'bg-gray-200'">
+                    </div>
+                    <div
+                        (click)="goToInsightsPage(1)"
+                        class="w-8 h-1 rounded-full cursor-pointer"
+                        [class]="currentInsightsPage === 1 ? 'bg-emerald-500' : 'bg-gray-200'">
+                    </div>
+                    <div
+                        (click)="goToInsightsPage(2)"
+                        class="w-8 h-1 rounded-full cursor-pointer"
+                        [class]="currentInsightsPage === 2 ? 'bg-emerald-500' : 'bg-gray-200'">
+                    </div>
+                    <div
+                        (click)="goToInsightsPage(3)"
+                        class="w-8 h-1 rounded-full cursor-pointer"
+                        [class]="currentInsightsPage === 3 ? 'bg-emerald-500' : 'bg-gray-200'">
+                    </div>
+                    <div
+                        (click)="goToInsightsPage(4)"
+                        class="w-8 h-1 rounded-full cursor-pointer"
+                        [class]="currentInsightsPage === 4 ? 'bg-emerald-500' : 'bg-gray-200'">
+                    </div>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <div class="flex space-x-2">
+                    <button
+                        (click)="prevInsightsPage()"
+                        [disabled]="currentInsightsPage === 0"
+                        [class]="'w-12 h-12 rounded-full flex items-center justify-center transition-colors duration-200' + (currentInsightsPage === 0 ? ' bg-gray-200 opacity-50 cursor-not-allowed' : ' bg-gray-200 hover:bg-gray-300')">
+                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+                    <button
+                        (click)="nextInsightsPage()"
+                        [disabled]="currentInsightsPage === totalInsightsPages - 1"
+                        [class]="'w-12 h-12 rounded-full flex items-center justify-center transition-colors duration-200' + (currentInsightsPage === totalInsightsPages - 1 ? ' bg-gray-200 opacity-50 cursor-not-allowed' : ' bg-gray-900 hover:bg-gray-800')">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 </section>
