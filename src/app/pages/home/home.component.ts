@@ -209,7 +209,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   // Hero content data
   private heroData: { [key: string]: HeroData } = {
     'dcaa-compliance': {
-      headline: 'DCAA compliance keeping you up at night?',
+      headline: 'DCAA Compliance Keeping You Up at Night?',
       subheadline: 'WrkPlan\'s purpose-built ERP eliminates the guesswork from government contracting.',
       description: 'Built for government contractors requiring DCAA compliance. Get paid faster, stay audit ready.',
       primaryButton: 'Schedule Your Demo',
@@ -223,7 +223,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       ]
     },
     'contract-management': {
-      headline: 'Take the complexity out of contract management',
+      headline: 'Take the Complexity Out of Contract Management',
       subheadline: 'Reduce the friction of managing multiple government contracts with different requirements.',
       description: 'Manage every aspect of your government contracts in one integrated platform.',
       primaryButton: 'Watch Contract Demo',
@@ -237,7 +237,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       ]
     },
     'project-accounting': {
-      headline: 'Accelerate your ROI<br>with WrkPlan',
+      headline: 'Accelerate Your ROI<br>with WrkPlan',
       subheadline: 'Transform manual billing into automated accuracy.',
       description: 'Simplify processes and control costs with our integrated platform. Streamline your financial operations with real-time insights and automated reporting capabilities.',
       primaryButton: 'Talk to Sales',
