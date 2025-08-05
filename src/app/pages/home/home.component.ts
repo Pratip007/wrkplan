@@ -189,8 +189,8 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       headline: 'DCAA Compliance Keeping You Up at Night?',
       subheadline: 'WrkPlan\'s purpose-built ERP eliminates the guesswork from government contracting.',
       description: 'Built for government contractors requiring DCAA compliance. Get paid faster, stay audit ready.',
-      primaryButton: 'Schedule Your Demo',
-      secondaryButton: 'See Compliance Features',
+      primaryButton: 'Talk to Sales',
+      secondaryButton: 'Download ebook',
       additionalLink: 'Read our blog: How SYSTOLIC Inc. achieved 94% faster invoicing',
       image: '/assects/home/hero/dc.jpg',
       bulletPoints: [
@@ -203,8 +203,8 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       headline: 'Take the Complexity Out of Contract Management',
       subheadline: 'Reduce the friction of managing multiple government contracts with different requirements.',
       description: 'Manage every aspect of your government contracts in one integrated platform.',
-      primaryButton: 'Watch Contract Demo',
-      secondaryButton: 'Read Contract Guide',
+      primaryButton: 'Sign up- Its free',
+      secondaryButton: 'Learn more',
       additionalLink: 'See how Garcia Information Systems transformed their operations',
       image: '/assects/home/hero/AdobeStock_835753807.jpeg',
       bulletPoints: [
@@ -217,8 +217,8 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       headline: 'Streamline Your Workforce<br>Management',
       subheadline: 'DCAA-compliant time tracking and employee management.',
       description: 'Manage timesheets, expenses, and subcontractors in compliance with DCAA requirements. Streamline your workforce operations with integrated payroll and performance tracking.',
-      primaryButton: 'Schedule Demo',
-      secondaryButton: 'See Workforce Features',
+      primaryButton: 'Schedule a Compliance Demo',
+      secondaryButton: 'Get a Free Demo',
       additionalLink: 'Read our blog: How SYSTOLIC Inc. achieved 94% faster invoicing',
       image: '/assects/home/hero/AdobeStock_974539324.jpeg',
       bulletPoints: [
