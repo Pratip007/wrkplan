@@ -267,3 +267,96 @@
         </div>
     </div>
 </section>
+
+<!-- Video Section -->
+<section class="py-16 lg:py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                Building success for government-focused contractors
+            </h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+                At WrkPlan, we specialize in ERP solutions for government contractors, where <span class="font-semibold">DCAA compliance</span> and <span class="font-semibold">operational excellence</span> make the difference.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="px-6 py-3 rounded-lg font-medium transition-all duration-200" [ngClass]="{
+                    'bg-[#d2fae5] text-gray-900': currentVideoCategory === 'federal',
+                    'bg-white text-gray-600 hover:bg-gray-50': currentVideoCategory !== 'federal'
+                }" (click)="switchVideoCategory('federal')">
+                    Federal Contractors
+                </button>
+                <button class="px-6 py-3 rounded-lg font-medium transition-all duration-200" [ngClass]="{
+                    'bg-[#d2fae5] text-gray-900': currentVideoCategory === 'defense',
+                    'bg-white text-gray-600 hover:bg-gray-50': currentVideoCategory !== 'defense'
+                }" (click)="switchVideoCategory('defense')">
+                    Defense Contractors
+                </button>
+                <button class="px-6 py-3 rounded-lg font-medium transition-all duration-200" [ngClass]="{
+                    'bg-[#d2fae5] text-gray-900': currentVideoCategory === 'consulting',
+                    'bg-white text-gray-600 hover:bg-gray-50': currentVideoCategory !== 'consulting'
+                }" (click)="switchVideoCategory('consulting')">
+                    Consulting Services
+                </button>
+            </div>
+        </div>
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl mb-12">
+            <div class="relative aspect-video bg-gradient-to-br from-gray-900 via-blue-900 to-gray-800">
+                <div class="absolute inset-0 bg-cover bg-center opacity-80" [style.background-image]="currentVideoData.backgroundImage"></div>
+                <div class="absolute inset-0 bg-black bg-opacity-40">
+                    <div class="flex flex-col justify-between h-full p-8 lg:p-12">
+                        <div>
+                            <h3 class="text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight">{{ currentVideoData.title }}</h3>
+                        </div>
+                        <div class="flex justify-between items-end">
+                            <div class="max-w-md">
+                                <p class="text-white text-sm lg:text-base leading-relaxed" [innerHTML]="currentVideoData.description"></p>
+                            </div>
+                            <button class="flex items-center gap-3 bg-white bg-opacity-90 hover:bg-opacity-100 text-gray-900 px-8 py-4 rounded-full font-medium transition-all duration-200 shadow-lg hover:shadow-xl" (click)="playVideo()">
+                                <div class="w-10 h-10 bg-[#73ba43] rounded-full flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </div>
+                                <span>Play video ({{ currentVideoData.videoTime }})</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-wrap justify-center items-center gap-12 lg:gap-16 mb-16">
+            <div class="h-16 flex items-center">
+                <img src="/assects/home/testimonials/GSA.svg" alt="GSA" class="h-12 object-contain">
+            </div>
+            <div class="h-16 flex items-center">
+                <img src="/assects/home/testimonials/DCMA.PNG" alt="DCMA" class="h-12 object-contain">
+            </div>
+            <div class="h-16 flex items-center">
+                <img src="/assects/home/testimonials/DFARS.png" alt="DFARS" class="h-12 object-contain">
+            </div>
+            <div class="h-16 flex items-center">
+                <img src="/assects/home/testimonials/Defense_Contract_Audit_Agency.jpg" alt="Defense Contract Audit Agency" class="h-12 object-contain">
+            </div>
+            <div class="h-16 flex items-center">
+                <img src="/assects/home/testimonials/US Defense.png" alt="US Defense" class="h-12 object-contain">
+            </div>
+            <div class="h-16 flex items-center">
+                <img src="/assects/home/testimonials/Fedral government.jpeg" alt="Federal Government" class="h-12 object-contain">
+            </div>
+        </div>
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+            <button class="bg-[#074e94] hover:bg-[#074e94]/90 text-white px-6 py-3 rounded-full font-medium transition-colors duration-200 shadow-lg hover:shadow-xl">
+                Read more Government Contractor customer stories
+            </button>
+            <button class="flex items-center gap-2 text-gray-600 hover:text-gray-900 font-medium transition-colors duration-200">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                </svg>
+                Watch on-demand demos
+            </button>
+        </div>
+    </div>
+</section>
+
+
