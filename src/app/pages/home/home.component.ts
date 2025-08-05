@@ -258,6 +258,16 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.currentSolutionsTab = tabKey;
     // Clear expanded sections when switching tabs
     this.expandedSections = {};
+
+    // Ensure video plays when Overview tab is selected
+    if (tabKey === 'overview') {
+      setTimeout(() => {
+        const video = document.querySelector('video') as HTMLVideoElement;
+        if (video) {
+          video.play().catch(e => console.log('Video autoplay prevented:', e));
+        }
+      }, 100);
+    }
   }
 
   toggleSection(sectionId: string) {
