@@ -1,0 +1,355 @@
+<nav class="bg-navbar border-b border-gray-200 sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+                <img src="/assects/logo.png" alt="Logo" class="h-8 sm:h-10 w-auto">
+            </div>
+
+            <!-- Desktop Navigation Menu -->
+            <div class="hidden lg:block">
+                <div class="ml-10 flex items-baseline space-x-4 xl:space-x-8">
+                    <!-- Products Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-300 hover:text-white px-2 xl:px-3 py-2 text-sm font-medium flex items-center transition-all duration-200 hover:bg-white/10 rounded-md">
+                            Products
+                            <svg class="ml-1 h-4 w-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+
+                        <!-- Products Dropdown Menu -->
+                        <div class="absolute left-0 mt-2 w-screen max-w-6xl bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-1 group-hover:translate-y-0 -ml-32 xl:-ml-48 border border-gray-100">
+                            <div class="p-4 sm:p-6 lg:p-8">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+                                    <!-- For Finance Column -->
+                                    <div>
+                                        <div class="flex items-center mb-4">
+                                            <svg class="h-5 w-5 text-gray-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                            </svg>
+                                            <h3 class="text-lg font-semibold text-gray-900">For Finance</h3>
+                                        </div>
+                                        <div class="space-y-4">
+                                            <div class="group/item p-2 rounded-md hover:bg-softteal transition-colors duration-200">
+                                                <h4 class="font-medium text-gray-900 mb-1 group-hover/item:text-deepteal transition-colors duration-200">Financial management & accounting</h4>
+                                                <p class="text-sm text-gray-600">Comprehensive cost accounting and financial reporting</p>
+                                            </div>
+                                            <div class="group/item p-2 rounded-md hover:bg-softteal transition-colors duration-200">
+                                                <h4 class="font-medium text-gray-900 mb-1 group-hover/item:text-deepteal transition-colors duration-200">Indirect rate management</h4>
+                                                <p class="text-sm text-gray-600">Automated indirect rate calculations and compliance</p>
+                                            </div>
+                                            <div class="group/item p-2 rounded-md hover:bg-softteal transition-colors duration-200">
+                                                <h4 class="font-medium text-gray-900 mb-1 group-hover/item:text-deepteal transition-colors duration-200">Incurred Cost Submission</h4>
+                                                <p class="text-sm text-gray-600">Generate all 16 ICE schedules automatically</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- For Operations Column -->
+                                    <div>
+                                        <div class="flex items-center mb-4">
+                                            <svg class="h-5 w-5 text-gray-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                            </svg>
+                                            <h3 class="text-lg font-semibold text-gray-900">For Operations</h3>
+                                        </div>
+                                        <div class="space-y-4">
+                                            <div class="group/item p-2 rounded-md hover:bg-softteal transition-colors duration-200">
+                                                <h4 class="font-medium text-gray-900 mb-1 group-hover/item:text-deepteal transition-colors duration-200">Workforce management</h4>
+                                                <p class="text-sm text-gray-600">Employee and subcontractor management</p>
+                                            </div>
+                                            <div class="group/item p-2 rounded-md hover:bg-softteal transition-colors duration-200">
+                                                <h4 class="font-medium text-gray-900 mb-1 group-hover/item:text-deepteal transition-colors duration-200">Purchasing & inventory</h4>
+                                                <p class="text-sm text-gray-600">Procurement and inventory management</p>
+                                            </div>
+                                            <div class="group/item p-2 rounded-md hover:bg-softteal transition-colors duration-200">
+                                                <h4 class="font-medium text-gray-900 mb-1 group-hover/item:text-deepteal transition-colors duration-200">Budgeting & forecasting</h4>
+                                                <p class="text-sm text-gray-600">Project planning and performance tracking</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- For Compliance Column -->
+                                    <div>
+                                        <div class="flex items-center mb-4">
+                                            <svg class="h-5 w-5 text-gray-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                            </svg>
+                                            <h3 class="text-lg font-semibold text-gray-900">For Compliance</h3>
+                                        </div>
+                                        <div class="space-y-4">
+                                            <div class="group/item p-2 rounded-md hover:bg-softteal transition-colors duration-200">
+                                                <h4 class="font-medium text-gray-900 mb-1 group-hover/item:text-deepteal transition-colors duration-200">DCAA compliance</h4>
+                                                <p class="text-sm text-gray-600">Built-in compliance features and audit support</p>
+                                            </div>
+                                            <div class="group/item p-2 rounded-md hover:bg-softteal transition-colors duration-200">
+                                                <h4 class="font-medium text-gray-900 mb-1 group-hover/item:text-deepteal transition-colors duration-200">Audit preparation</h4>
+                                                <p class="text-sm text-gray-600">Pre-award and post-award audit readiness</p>
+                                            </div>
+                                            <div class="group/item p-2 rounded-md hover:bg-softteal transition-colors duration-200">
+                                                <h4 class="font-medium text-gray-900 mb-1 group-hover/item:text-deepteal transition-colors duration-200">Government invoicing</h4>
+                                                <p class="text-sm text-gray-600">Automated SF-1034/1035 invoice generation</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-6 lg:mt-8 pt-6 border-t border-gray-200 flex flex-col sm:flex-row justify-between space-y-2 sm:space-y-0">
+                                    <a href="#" class="text-emerald-600 hover:text-emerald-700 font-medium flex items-center transition-colors duration-200 hover:scale-105 transform">
+                                        See all products
+                                        <svg class="ml-1 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="text-emerald-600 hover:text-emerald-700 font-medium flex items-center transition-colors duration-200 hover:scale-105 transform">
+                                        See how we support your role
+                                        <svg class="ml-1 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Solutions Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-300 hover:text-white px-2 xl:px-3 py-2 text-sm font-medium flex items-center transition-all duration-200 hover:bg-white/10 rounded-md">
+                            Solutions
+                            <svg class="ml-1 h-4 w-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+
+                        <!-- Solutions Dropdown Menu -->
+                        <div class="absolute left-0 mt-2 w-screen max-w-5xl bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-1 group-hover:translate-y-0 -ml-24 xl:-ml-32 border border-gray-100">
+                            <div class="p-4 sm:p-6 lg:p-8">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                                    <!-- By Industry Column -->
+                                    <div>
+                                        <div class="flex items-center mb-4">
+                                            <svg class="h-5 w-5 text-gray-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-4m-5 0H3m2 0h3M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                                            </svg>
+                                            <h3 class="text-lg font-semibold text-gray-900">By Industry</h3>
+                                        </div>
+                                        <div class="space-y-3">
+                                            <a href="#" class="block text-gray-700 hover:text-deepteal py-2 px-2 rounded-md hover:bg-softteal transition-all duration-200">Government Contractors</a>
+                                            <a href="#" class="block text-gray-700 hover:text-deepteal py-2 px-2 rounded-md hover:bg-softteal transition-all duration-200">Professional Services</a>
+                                            <a href="#" class="block text-gray-700 hover:text-deepteal py-2 px-2 rounded-md hover:bg-softteal transition-all duration-200">Small-to-Medium Businesses</a>
+                                            <a href="#" class="block text-gray-700 hover:text-deepteal py-2 px-2 rounded-md hover:bg-softteal transition-all duration-200">Federal Contractors</a>
+                                        </div>
+                                    </div>
+
+                                    <!-- By Business Size Column -->
+                                    <div>
+                                        <div class="flex items-center mb-4">
+                                            <svg class="h-5 w-5 text-gray-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                            </svg>
+                                            <h3 class="text-lg font-semibold text-gray-900">By Business Size</h3>
+                                        </div>
+                                        <div class="space-y-3">
+                                            <a href="#" class="block text-gray-700 hover:text-deepteal py-2 px-2 rounded-md hover:bg-softteal transition-all duration-200">Small Business (10-50 employees)</a>
+                                            <a href="#" class="block text-gray-700 hover:text-deepteal py-2 px-2 rounded-md hover:bg-softteal transition-all duration-200">Mid-size (50-200 employees)</a>
+                                            <a href="#" class="block text-gray-700 hover:text-deepteal py-2 px-2 rounded-md hover:bg-softteal transition-all duration-200">Growing Enterprise (200+ employees)</a>
+                                            <a href="#" class="block text-gray-700 hover:text-deepteal py-2 px-2 rounded-md hover:bg-softteal transition-all duration-200">Organizations Beyond QuickBooks</a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Spotlight Column -->
+                                    <div class="bg-gray-50 rounded-lg p-4 lg:p-6 sm:col-span-2 lg:col-span-1 hover:bg-gray-100 transition-colors duration-200">
+                                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Spotlight</h3>
+                                        <div class="space-y-4">
+                                            <div class="flex items-start group/item">
+                                                <div class="bg-emerald-100 rounded p-2 mr-3 flex-shrink-0 group-hover/item:bg-emerald-200 transition-colors duration-200">
+                                                    <svg class="h-6 w-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <h4 class="font-medium text-gray-900 group-hover/item:text-emerald-600 transition-colors duration-200">DCAA Compliance</h4>
+                                                    <p class="text-sm text-gray-600">Built-in compliance features for government contractors</p>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-start group/item">
+                                                <div class="bg-blue-100 rounded p-2 mr-3 flex-shrink-0 group-hover/item:bg-blue-200 transition-colors duration-200">
+                                                    <svg class="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <h4 class="font-medium text-gray-900 group-hover/item:text-blue-600 transition-colors duration-200">Quick Implementation</h4>
+                                                    <p class="text-sm text-gray-600">90-day implementation with unlimited support</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Customer Success Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-300 hover:text-white px-2 xl:px-3 py-2 text-sm font-medium flex items-center transition-all duration-200 hover:bg-white/10 rounded-md">
+                            Customer Success
+                            <svg class="ml-1 h-4 w-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+
+                        <!-- Customer Success Dropdown Menu -->
+                        <div class="absolute left-0 mt-2 w-screen max-w-3xl bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-1 group-hover:translate-y-0 -ml-16 xl:-ml-24 border border-gray-100">
+                            <div class="p-4 sm:p-6 lg:p-8">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                                    <!-- Support & Services Column -->
+                                    <div>
+                                        <div class="flex items-center mb-4">
+                                            <svg class="h-5 w-5 text-gray-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                            </svg>
+                                            <h3 class="text-lg font-semibold text-gray-900">Support & Services</h3>
+                                        </div>
+                                        <div class="space-y-3">
+                                            <a href="#" class="block text-gray-700 hover:text-deepteal py-2 px-2 rounded-md hover:bg-softteal transition-all duration-200">Implementation Services</a>
+                                            <a href="#" class="block text-gray-700 hover:text-deepteal py-2 px-2 rounded-md hover:bg-softteal transition-all duration-200">Training & Support</a>
+                                            <a href="#" class="block text-gray-700 hover:text-deepteal py-2 px-2 rounded-md hover:bg-softteal transition-all duration-200">DCAA Audit Preparation</a>
+                                            <a href="#" class="block text-gray-700 hover:text-deepteal py-2 px-2 rounded-md hover:bg-softteal transition-all duration-200">Consulting Services</a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Success Stories Column -->
+                                    <div>
+                                        <div class="flex items-center mb-4">
+                                            <svg class="h-5 w-5 text-gray-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                                            </svg>
+                                            <h3 class="text-lg font-semibold text-gray-900">Success Stories</h3>
+                                        </div>
+                                        <div class="space-y-3">
+                                            <a href="#" class="block text-gray-700 hover:text-deepteal py-2 px-2 rounded-md hover:bg-softteal transition-all duration-200">Government Contractors</a>
+                                            <a href="#" class="block text-gray-700 hover:text-deepteal py-2 px-2 rounded-md hover:bg-softteal transition-all duration-200">Professional Services Firms</a>
+                                            <a href="#" class="block text-gray-700 hover:text-deepteal py-2 px-2 rounded-md hover:bg-softteal transition-all duration-200">Small Business Success</a>
+                                            <a href="#" class="block text-gray-700 hover:text-deepteal py-2 px-2 rounded-md hover:bg-softteal transition-all duration-200">View all customer stories</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Resources -->
+                    <div class="relative group">
+                        <button class="text-gray-300 hover:text-white px-2 xl:px-3 py-2 text-sm font-medium flex items-center transition-all duration-200 hover:bg-white/10 rounded-md">
+                            Resources
+                            <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Why WRKPLAN -->
+                    <div class="relative group">
+                        <button class="text-gray-300 hover:text-white px-2 xl:px-3 py-2 text-sm font-medium flex items-center transition-all duration-200 hover:bg-white/10 rounded-md">
+                            Why WRKPLAN?
+                            <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Button - Desktop -->
+            <div class="hidden lg:block">
+                <button class="bg-softteal hover:bg-deepteal text-deepteal hover:text-white px-4 xl:px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 hover:scale-105 transform shadow-lg hover:shadow-xl">
+                    Talk to Sales
+                </button>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="lg:hidden">
+                <button (click)="toggleMobileMenu()" class="text-gray-300 hover:text-white p-2 transition-colors duration-200 hover:bg-white/10 rounded-md">
+                    <svg *ngIf="!isMobileMenuOpen" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg *ngIf="isMobileMenuOpen" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div *ngIf="isMobileMenuOpen" class="lg:hidden">
+        <div class="px-4 pt-2 pb-3 space-y-1 bg-navbar border-t border-gray-200">
+            <!-- Mobile Products -->
+            <div class="mobile-dropdown">
+                <button (click)="toggleMobileDropdown('products')" class="mobile-dropdown-button w-full text-left text-gray-300 hover:text-white px-3 py-2 text-base font-medium flex items-center justify-between transition-colors duration-200 hover:bg-white/10 rounded-md">
+                    Products
+                    <svg class="mobile-dropdown-icon h-5 w-5 transform transition-transform duration-200" [class.rotate-180]="mobileDropdowns.products" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="mobile-dropdown-content" [class.hidden]="!mobileDropdowns.products" class="pl-6 space-y-2">
+                    <a href="#" class="block text-gray-300 hover:text-white py-2 transition-colors duration-200 hover:translate-x-1 transform">WRKPLAN ERP Platform</a>
+                    <a href="#" class="block text-gray-300 hover:text-white py-2 transition-colors duration-200 hover:translate-x-1 transform">Contract Management</a>
+                    <a href="#" class="block text-gray-300 hover:text-white py-2 transition-colors duration-200 hover:translate-x-1 transform">Project Accounting</a>
+                    <a href="#" class="block text-gray-300 hover:text-white py-2 transition-colors duration-200 hover:translate-x-1 transform">Time & Expense</a>
+                    <a href="#" class="block text-gray-300 hover:text-white py-2 transition-colors duration-200 hover:translate-x-1 transform">Financial Management</a>
+                    <a href="#" class="block text-gray-300 hover:text-white py-2 transition-colors duration-200 hover:translate-x-1 transform">Workforce Management</a>
+                    <a href="#" class="block text-gray-300 hover:text-white py-2 transition-colors duration-200 hover:translate-x-1 transform">DCAA Compliance</a>
+                </div>
+            </div>
+
+            <!-- Mobile Solutions -->
+            <div class="mobile-dropdown">
+                <button (click)="toggleMobileDropdown('solutions')" class="mobile-dropdown-button w-full text-left text-gray-300 hover:text-white px-3 py-2 text-base font-medium flex items-center justify-between transition-colors duration-200 hover:bg-white/10 rounded-md">
+                    Solutions
+                    <svg class="mobile-dropdown-icon h-5 w-5 transform transition-transform duration-200" [class.rotate-180]="mobileDropdowns.solutions" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="mobile-dropdown-content" [class.hidden]="!mobileDropdowns.solutions" class="pl-6 space-y-2">
+                    <a href="#" class="block text-gray-300 hover:text-white py-2 transition-colors duration-200 hover:translate-x-1 transform">Government Contractors</a>
+                    <a href="#" class="block text-gray-300 hover:text-white py-2 transition-colors duration-200 hover:translate-x-1 transform">Professional Services</a>
+                    <a href="#" class="block text-gray-300 hover:text-white py-2 transition-colors duration-200 hover:translate-x-1 transform">Small-to-Medium Businesses</a>
+                    <a href="#" class="block text-gray-300 hover:text-white py-2 transition-colors duration-200 hover:translate-x-1 transform">Federal Contractors</a>
+                </div>
+            </div>
+
+            <!-- Mobile Customer Success -->
+            <div class="mobile-dropdown">
+                <button (click)="toggleMobileDropdown('customerSuccess')" class="mobile-dropdown-button w-full text-left text-gray-300 hover:text-white px-3 py-2 text-base font-medium flex items-center justify-between transition-colors duration-200 hover:bg-white/10 rounded-md">
+                    Customer Success
+                    <svg class="mobile-dropdown-icon h-5 w-5 transform transition-transform duration-200" [class.rotate-180]="mobileDropdowns.customerSuccess" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="mobile-dropdown-content" [class.hidden]="!mobileDropdowns.customerSuccess" class="pl-6 space-y-2">
+                    <a href="#" class="block text-gray-300 hover:text-white py-2 transition-colors duration-200 hover:translate-x-1 transform">Implementation Services</a>
+                    <a href="#" class="block text-gray-300 hover:text-white py-2 transition-colors duration-200 hover:translate-x-1 transform">Training & Support</a>
+                    <a href="#" class="block text-gray-300 hover:text-white py-2 transition-colors duration-200 hover:translate-x-1 transform">Success Stories</a>
+                    <a href="#" class="block text-gray-300 hover:text-white py-2 transition-colors duration-200 hover:translate-x-1 transform">DCAA Audit Preparation</a>
+                </div>
+            </div>
+
+            <!-- Mobile Resources -->
+            <a href="#" class="block text-gray-300 hover:text-white px-3 py-2 text-base font-medium transition-colors duration-200 hover:bg-white/10 rounded-md">Resources</a>
+
+            <!-- Mobile Why WRKPLAN -->
+            <a href="#" class="block text-gray-300 hover:text-white px-3 py-2 text-base font-medium transition-colors duration-200 hover:bg-white/10 rounded-md">Why WRKPLAN?</a>
+
+            <!-- Mobile CTA -->
+            <div class="pt-4">
+                <button class="w-full bg-softteal hover:bg-deepteal text-deepteal hover:text-white px-4 py-3 rounded-full text-base font-medium transition-all duration-200 hover:scale-105 transform shadow-lg hover:shadow-xl">
+                    Talk to Sales
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>

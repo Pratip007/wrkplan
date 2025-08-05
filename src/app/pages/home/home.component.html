@@ -1,0 +1,114 @@
+<!-- Hero Section -->
+<section class="py-12 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Main Hero Content -->
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16">
+            <!-- Left Content -->
+            <div class="order-2 lg:order-1">
+                <div id="hero-content">
+                    <!-- Content will be dynamically updated -->
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight" [innerHTML]="currentHeroData.headline">
+                    </h1>
+                    <p class="text-lg sm:text-xl text-gray-600 mb-6 leading-relaxed">
+                        {{ currentHeroData.subheadline }}
+                    </p>
+                    <p class="text-base text-gray-700 mb-8 leading-relaxed whitespace-pre-line">
+                        {{ currentHeroData.description }}
+                    </p>
+
+                    <!-- Bullet Points -->
+                    <ul class="space-y-3 mb-8">
+                        <li *ngFor="let point of currentHeroData.bulletPoints" class="flex items-start">
+                            <svg class="h-5 w-5 text-emerald-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-700">{{ point }}</span>
+                        </li>
+                    </ul>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <button class="bg-[#0a182e] hover:bg-[#0a182e]/90 text-white px-6 py-3 rounded-full text-base font-medium transition-colors duration-200 shadow-lg hover:shadow-xl">
+                            {{ currentHeroData.primaryButton }}
+                        </button>
+                        <button class="bg-white hover:bg-gray-100 text-[#0a182e] px-6 py-3 rounded-full text-base font-medium transition-colors duration-200 shadow-lg hover:shadow-xl">
+                            {{ currentHeroData.secondaryButton }}
+                        </button>
+                    </div>
+
+                    <!-- Additional Link -->
+                    <div class="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors duration-200 cursor-pointer">
+                        <svg class="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                        </svg>
+                        <span class="text-sm font-medium">{{ currentHeroData.additionalLink }}</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Image -->
+            <div class="order-1 lg:order-2">
+                <div class="relative flex justify-center">
+                    <div id="hero-image" class="w-full h-[400px] sm:h-[350px] lg:h-[500px] overflow-hidden rounded-2xl">
+                        <img
+                            [src]="currentHeroData.image"
+                            alt="Hero Image"
+                            class="w-full h-full object-cover transition-opacity duration-500"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Tab Navigation - Progress Bar Design -->
+        <div class="grid md:grid-cols-3 gap-3">
+            <button
+                class="tab-button text-left p-4 rounded-lg transition-all duration-300 relative"
+                [class.bg-tabnav]="currentTab === 'dcaa-compliance'"
+                [class.bg-white]="currentTab !== 'dcaa-compliance'"
+                [class.active]="currentTab === 'dcaa-compliance'"
+                (click)="switchTab('dcaa-compliance')"
+            >
+                <div class="absolute left-0 top-0 w-1 rounded-l-lg tab-indicator transition-all duration-500"
+                     [class.bg-[#0a182e]]="currentTab === 'dcaa-compliance'"
+                     [class.bg-transparent]="currentTab !== 'dcaa-compliance'"
+                     [style.height]="getProgressBarHeight('dcaa-compliance')">
+                </div>
+                <h3 class="font-semibold text-gray-900 mb-1 text-sm">DCAA Compliance Solutions</h3>
+                <p class="text-xs text-gray-600">Built-in compliance features for government contractors</p>
+            </button>
+
+            <button
+                class="tab-button text-left p-4 rounded-lg transition-all duration-300 relative"
+                [class.bg-tabnav]="currentTab === 'contract-management'"
+                [class.bg-white]="currentTab !== 'contract-management'"
+                [class.active]="currentTab === 'contract-management'"
+                (click)="switchTab('contract-management')"
+            >
+                <div class="absolute left-0 top-0 w-1 rounded-l-lg tab-indicator transition-all duration-500"
+                     [class.bg-[#0a182e]]="currentTab === 'contract-management'"
+                     [class.bg-transparent]="currentTab !== 'contract-management'"
+                     [style.height]="getProgressBarHeight('contract-management')">
+                </div>
+                <h3 class="font-semibold text-gray-900 mb-1 text-sm">Contract Management Excellence</h3>
+                <p class="text-xs text-gray-600">Streamline your entire contract lifecycle</p>
+            </button>
+
+            <button
+                class="tab-button text-left p-4 rounded-lg transition-all duration-300 relative"
+                [class.bg-tabnav]="currentTab === 'project-accounting'"
+                [class.bg-white]="currentTab !== 'project-accounting'"
+                [class.active]="currentTab === 'project-accounting'"
+                (click)="switchTab('project-accounting')"
+            >
+                <div class="absolute left-0 top-0 w-1 rounded-l-lg tab-indicator transition-all duration-500"
+                     [class.bg-[#0a182e]]="currentTab === 'project-accounting'"
+                     [class.bg-transparent]="currentTab !== 'project-accounting'"
+                     [style.height]="getProgressBarHeight('project-accounting')">
+                </div>
+                <h3 class="font-semibold text-gray-900 mb-1 text-sm">Project Accounting & Reporting</h3>
+                <p class="text-xs text-gray-600">Real-time financial insights and automated reporting</p>
+            </button>
+        </div>
+    </div>
+</section>
