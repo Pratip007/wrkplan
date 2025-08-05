@@ -105,6 +105,7 @@ export class HomeComponent implements OnInit, OnDestroy {
           description: 'Automated SF-1034/1035 invoice generation with built-in compliance features for faster government payment processing.'
         }
       ],
+      video: '/assects/home/Solutions Overview/erp overview.mp4',
       image: '/assects/home/hero/erpDashboard.jpg'
     },
     contracts: {
@@ -126,7 +127,7 @@ export class HomeComponent implements OnInit, OnDestroy {
           description: 'Track and manage business opportunities from initial identification through contract award.'
         }
       ],
-      image: '/assects/home/hero/erpDashboard.jpg'
+      image: '/assects/home/Solutions Overview/contract management.webp'
     },
     finance: {
       description: 'Manage your transactions, costs, and revenue in one fully-integrated system.',
@@ -152,7 +153,7 @@ export class HomeComponent implements OnInit, OnDestroy {
           description: 'Advanced budgeting and forecasting tools with scenario planning and variance analysis for better financial control.'
         }
       ],
-      image: '/assects/home/hero/erpDashboard.jpg'
+      image: '/assects/home/Solutions Overview/finance management.png'
     },
     workforce: {
       description: 'Manage timesheets and expenses, as well as sub-contractors, in compliance with DCAA.',
@@ -178,7 +179,7 @@ export class HomeComponent implements OnInit, OnDestroy {
           description: 'Streamlined subcontractor management with performance tracking, compliance monitoring, and payment processing.'
         }
       ],
-      image: '/assects/home/hero/erpDashboard.jpg'
+      image: '/assects/home/Solutions Overview/workforse management.png'
     }
   };
 
