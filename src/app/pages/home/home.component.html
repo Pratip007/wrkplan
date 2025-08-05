@@ -249,12 +249,18 @@
                     <!-- Video for Overview tab -->
                     <video *ngIf="currentSolutionsTab === 'overview' && solutionsTabData[currentSolutionsTab].video"
                            [src]="solutionsTabData[currentSolutionsTab].video"
+                           #overviewVideo
                            autoplay
                            muted
                            loop
                            playsinline
                            class="w-full h-auto"
-                           preload="auto">
+                           preload="auto"
+                           (loadeddata)="onVideoLoaded($event)"
+                           (canplay)="onVideoCanPlay($event)"
+                           (loadedmetadata)="onVideoLoaded($event)"
+                           (loadstart)="onVideoLoaded($event)"
+                           (click)="playVideoOnClick()">
                         Your browser does not support the video tag.
                     </video>
                     <!-- Image for other tabs -->

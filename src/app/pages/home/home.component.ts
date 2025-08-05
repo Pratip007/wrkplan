@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
@@ -19,7 +19,7 @@ interface HeroData {
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   currentTab = 'dcaa-compliance';
       currentSolutionsTab = 'overview';
   expandedSections: { [key: string]: boolean } = {};
@@ -229,13 +229,31 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
   };
 
-  ngOnInit() {
+    ngOnInit() {
     // Set initial content
     this.updateHeroContent('dcaa-compliance');
 
     // Start auto-rotation and progress bar
     this.startAutoRotation();
     this.startProgressBar();
+  }
+
+  ngAfterViewInit() {
+    // Ensure video plays after view is initialized
+    setTimeout(() => {
+      this.ensureVideoPlays();
+    }, 100);
+
+    // Try playing video immediately and repeatedly
+    this.forceVideoPlayOnLoad();
+
+    // Add touch/swipe support for mobile
+    setTimeout(() => {
+      this.setupTouchSupport();
+    }, 100);
+
+    // Add click listener to play video on any user interaction
+    document.addEventListener('click', this.playVideoOnClick.bind(this), { once: true });
   }
 
   ngOnDestroy() {
@@ -261,12 +279,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     // Ensure video plays when Overview tab is selected
     if (tabKey === 'overview') {
-      setTimeout(() => {
-        const video = document.querySelector('video') as HTMLVideoElement;
-        if (video) {
-          video.play().catch(e => console.log('Video autoplay prevented:', e));
-        }
-      }, 100);
+      this.ensureVideoPlays();
     }
   }
 
@@ -333,6 +346,76 @@ export class HomeComponent implements OnInit, OnDestroy {
     alert('Video would play here - integrate with your video player of choice');
   }
 
+  onVideoLoaded(event: any) {
+    const video = event.target as HTMLVideoElement;
+    this.forceVideoPlay(video);
+  }
+
+  onVideoCanPlay(event: any) {
+    const video = event.target as HTMLVideoElement;
+    this.forceVideoPlay(video);
+  }
+
+  private forceVideoPlay(video: HTMLVideoElement) {
+    if (video && this.currentSolutionsTab === 'overview') {
+      // Set video properties
+      video.muted = true;
+      video.autoplay = true;
+      video.loop = true;
+
+      video.play().catch(e => {
+        console.log('Video play attempt failed:', e);
+        // Try again after a short delay
+        setTimeout(() => {
+          video.play().catch(e2 => console.log('Second video play attempt failed:', e2));
+        }, 200);
+      });
+    }
+  }
+
+  private forceVideoPlayOnLoad() {
+    // Try multiple times with different intervals
+    const intervals = [50, 100, 200, 500, 1000, 2000];
+
+    intervals.forEach(delay => {
+      setTimeout(() => {
+        const video = document.querySelector('video') as HTMLVideoElement;
+        if (video && this.currentSolutionsTab === 'overview') {
+          this.forceVideoPlay(video);
+        }
+      }, delay);
+    });
+  }
+
+  playVideoOnClick() {
+    const video = document.querySelector('video') as HTMLVideoElement;
+    if (video && this.currentSolutionsTab === 'overview') {
+      this.forceVideoPlay(video);
+    }
+  }
+
+  private ensureVideoPlays() {
+    // Try multiple times with different delays
+    const attempts = [100, 300, 500, 1000];
+
+    attempts.forEach(delay => {
+      setTimeout(() => {
+        const video = document.querySelector('video') as HTMLVideoElement;
+        if (video && this.currentSolutionsTab === 'overview') {
+          this.forceVideoPlay(video);
+        }
+      }, delay);
+    });
+
+    // Set up interval to ensure video keeps playing
+    setInterval(() => {
+      const video = document.querySelector('video') as HTMLVideoElement;
+      if (video && video.paused && this.currentSolutionsTab === 'overview') {
+        this.forceVideoPlay(video);
+      }
+    }, 2000);
+  }
+
   // Carousel functionality for insights section
   currentInsightsPage = 0;
   totalInsightsPages = 5;
@@ -364,12 +447,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
   }
 
-      ngAfterViewInit() {
-    // Add touch/swipe support for mobile
-    setTimeout(() => {
-      this.setupTouchSupport();
-    }, 100);
-  }
+
 
   private setupTouchSupport() {
     const container = document.getElementById('cards-container');
