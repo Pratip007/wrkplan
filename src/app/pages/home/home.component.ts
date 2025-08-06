@@ -260,7 +260,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       ]
     },
     'workforce-management': {
-      headline: 'Manage timesheets and expenses,  as well as sub-contractors, in compliance with DCAA.',
+      headline: 'Streamline Payroll with Time, Labor & HR Integration',
       subheadline: 'Manage timesheets and expenses, as well as sub-contractors, in compliance with DCAA.',
       description: 'DCAA-compliant time tracking and employee management with integrated payroll and performance tracking.',
       primaryButton: 'Schedule a Compliance Demo',
