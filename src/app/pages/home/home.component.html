@@ -534,7 +534,7 @@
 
                     </div>
 
-                    
+
                 </div>
             </div>
 
@@ -543,29 +543,10 @@
                 <!-- Progress Indicator -->
                 <div class="flex space-x-2">
                     <div
-                        (click)="goToInsightsPage(0)"
+                        *ngFor="let page of [].constructor(totalInsightsPages); let i = index"
+                        (click)="goToInsightsPage(i)"
                         class="w-8 h-1 rounded-full cursor-pointer"
-                        [class]="currentInsightsPage === 0 ? 'bg-emerald-500' : 'bg-gray-200'">
-                    </div>
-                    <div
-                        (click)="goToInsightsPage(1)"
-                        class="w-8 h-1 rounded-full cursor-pointer"
-                        [class]="currentInsightsPage === 1 ? 'bg-emerald-500' : 'bg-gray-200'">
-                    </div>
-                    <div
-                        (click)="goToInsightsPage(2)"
-                        class="w-8 h-1 rounded-full cursor-pointer"
-                        [class]="currentInsightsPage === 2 ? 'bg-emerald-500' : 'bg-gray-200'">
-                    </div>
-                    <div
-                        (click)="goToInsightsPage(3)"
-                        class="w-8 h-1 rounded-full cursor-pointer"
-                        [class]="currentInsightsPage === 3 ? 'bg-emerald-500' : 'bg-gray-200'">
-                    </div>
-                    <div
-                        (click)="goToInsightsPage(4)"
-                        class="w-8 h-1 rounded-full cursor-pointer"
-                        [class]="currentInsightsPage === 4 ? 'bg-emerald-500' : 'bg-gray-200'">
+                        [class]="currentInsightsPage === i ? 'bg-emerald-500' : 'bg-gray-200'">
                     </div>
                 </div>
 
