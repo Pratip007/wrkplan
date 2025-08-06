@@ -284,7 +284,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       headline: 'Streamline Payroll with Time, Labor & HR Integration',
       subheadline: 'Manage timesheets and expenses, as well as sub-contractors, in compliance with DCAA.',
       description: 'DCAA-compliant time tracking and employee management with integrated payroll and performance tracking.',
-      primaryButton: 'Schedule a Demo',
+      primaryButton: 'Schedule a Call',
       secondaryButton: 'Get a Free Demo',
       additionalLink: 'Read our blog: How SYSTOLIC Inc. achieved 94% faster invoicing',
       image: '/assects/home/hero/Untitled design (5).png',
