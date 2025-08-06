@@ -7,9 +7,9 @@
             <div class="order-1">
                 <div id="hero-content">
                     <!-- Content will be dynamically updated -->
-                    <h1 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight" [innerHTML]="currentHeroData.headline">
+                    <h1 class="text-3xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight" [innerHTML]="currentHeroData.headline">
                     </h1>
-                    <p class="text-base sm:text-lg lg:text-xl text-gray-600 mb-4 sm:mb-6 leading-relaxed">
+                    <p class="text-lg sm:text-lg lg:text-xl text-gray-600 mb-4 sm:mb-6 leading-relaxed">
                         {{ currentHeroData.subheadline }}
                     </p>
                     <!-- <p class="text-base text-gray-700 mb-8 leading-relaxed whitespace-pre-line">
@@ -19,19 +19,19 @@
                     <!-- Bullet Points -->
                     <ul class="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
                         <li *ngFor="let point of currentHeroData.bulletPoints" class="flex items-start">
-                            <svg class="h-4 w-4 sm:h-5 sm:w-5 text-emerald-600 mr-2 sm:mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="h-5 w-5 sm:h-5 sm:w-5 text-emerald-600 mr-2 sm:mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span class="text-sm sm:text-base text-gray-700">{{ point }}</span>
+                            <span class="text-base sm:text-base text-gray-700">{{ point }}</span>
                         </li>
                     </ul>
 
                     <!-- CTA Buttons -->
                     <div class="flex flex-row gap-3 sm:gap-4 mb-6 sm:mb-8">
-                        <button class="bg-[#074e94] hover:bg-[#074e94]/90 text-white px-4 sm:px-5 lg:px-6 py-2.5 sm:py-3 rounded-full text-sm sm:text-base lg:text-lg font-medium transition-colors duration-200 shadow-lg hover:shadow-xl flex-shrink-0">
+                        <button class="bg-[#074e94] hover:bg-[#074e94]/90 text-white px-5 sm:px-5 lg:px-6 py-3 sm:py-3 rounded-full text-base sm:text-base lg:text-lg font-medium transition-colors duration-200 shadow-lg hover:shadow-xl flex-shrink-0">
                             {{ currentHeroData.primaryButton }}
                         </button>
-                        <button class="bg-white hover:bg-gray-100 text-[#0a182e] px-4 sm:px-5 lg:px-6 py-2.5 sm:py-3 rounded-full text-sm sm:text-base lg:text-lg font-medium transition-colors duration-200 shadow-lg hover:shadow-xl flex-shrink-0">
+                        <button class="bg-white hover:bg-gray-100 text-[#0a182e] px-5 sm:px-5 lg:px-6 py-3 sm:py-3 rounded-full text-base sm:text-base lg:text-lg font-medium transition-colors duration-200 shadow-lg hover:shadow-xl flex-shrink-0">
                             {{ currentHeroData.secondaryButton }}
                         </button>
                     </div>
@@ -584,112 +584,112 @@
             <!-- Desktop/Tablet: Original Grid Layout -->
             <div class="hidden md:block">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-                    <!-- Card 1: Pre-Configured Chart of Accounts -->
-                    <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[400px] sm:min-h-[450px] lg:min-h-[500px]">
-                        <div class="aspect-video bg-gradient-to-br from-emerald-100 to-emerald-200 relative overflow-hidden flex items-center justify-center">
-                            <img src="/assects/home/inside section/11668652_20945245.png" alt="DCAA Chart of Accounts" class="w-3/4 h-3/4 object-contain rounded-xl">
-                        </div>
-                        <div class="p-4 sm:p-6 lg:p-8 flex flex-col flex-grow">
-                            <div class="mb-3">
-                                <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Feature</span>
+                        <!-- Card 1: Pre-Configured Chart of Accounts -->
+                        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[400px] sm:min-h-[450px] lg:min-h-[500px]">
+                            <div class="aspect-video bg-gradient-to-br from-emerald-100 to-emerald-200 relative overflow-hidden flex items-center justify-center">
+                                <img src="/assects/home/inside section/11668652_20945245.png" alt="DCAA Chart of Accounts" class="w-3/4 h-3/4 object-contain rounded-xl">
                             </div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-                                Pre-Configured Chart of Accounts
-                            </h3>
-                            <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
-                                Get audit-ready faster with built-in DCAA rules, proper segregation of unallowable, tiered indirect pools, and custom account setups—ideal for accurate reporting, rate tracking, and compliance.
-                            </p>
-                            <button class="w-full bg-[#074e94] hover:bg-[#074e94]/90 text-white px-6 py-3 rounded-full font-medium transition-colors duration-200 shadow-lg hover:shadow-xl mt-auto">
-                                Learn more
-                            </button>
+                            <div class="p-4 sm:p-6 lg:p-8 flex flex-col flex-grow">
+                                <div class="mb-3">
+                                    <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Feature</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                                    Pre-Configured Chart of Accounts
+                                </h3>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+                                    Get audit-ready faster with built-in DCAA rules, proper segregation of unallowable, tiered indirect pools, and custom account setups—ideal for accurate reporting, rate tracking, and compliance.
+                                </p>
+                                <button class="w-full bg-[#074e94] hover:bg-[#074e94]/90 text-white px-6 py-3 rounded-full font-medium transition-colors duration-200 shadow-lg hover:shadow-xl mt-auto">
+                                    Learn more
+                                </button>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Card 2: Integrated A/R, A/P & General Ledger -->
-                    <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[400px] sm:min-h-[450px] lg:min-h-[500px]">
-                        <div class="aspect-video bg-gradient-to-br from-blue-100 to-blue-200 relative overflow-hidden flex items-center justify-center">
-                            <img src="/assects/home/inside section/11669146_20943762.png" alt="Integrated AR AP GL" class="w-3/4 h-3/4 object-contain rounded-xl">
-                        </div>
-                        <div class="p-4 sm:p-6 lg:p-8 flex flex-col flex-grow">
-                            <div class="mb-3">
-                                <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Feature</span>
+                        <!-- Card 2: Integrated A/R, A/P & General Ledger -->
+                        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[400px] sm:min-h-[450px] lg:min-h-[500px]">
+                            <div class="aspect-video bg-gradient-to-br from-blue-100 to-blue-200 relative overflow-hidden flex items-center justify-center">
+                                <img src="/assects/home/inside section/11669146_20943762.png" alt="Integrated AR AP GL" class="w-3/4 h-3/4 object-contain rounded-xl">
                             </div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-                                Integrated A/R, A/P & General Ledger
-                            </h3>
-                            <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
-                                Eliminate redundancy with three-way integration, explore full drill-downs from reports to entries, reconcile banks and cards with ease, and manage multiple entities under one compliant ERP.
-                            </p>
-                            <button class="w-full bg-[#074e94] hover:bg-[#074e94]/90 text-white px-6 py-3 rounded-full font-medium transition-colors duration-200 shadow-lg hover:shadow-xl mt-auto">
-                                Learn more
-                            </button>
+                            <div class="p-4 sm:p-6 lg:p-8 flex flex-col flex-grow">
+                                <div class="mb-3">
+                                    <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Feature</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                                    Integrated A/R, A/P & General Ledger
+                                </h3>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+                                    Eliminate redundancy with three-way integration, explore full drill-downs from reports to entries, reconcile banks and cards with ease, and manage multiple entities under one compliant ERP.
+                                </p>
+                                <button class="w-full bg-[#074e94] hover:bg-[#074e94]/90 text-white px-6 py-3 rounded-full font-medium transition-colors duration-200 shadow-lg hover:shadow-xl mt-auto">
+                                    Learn more
+                                </button>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Card 3: Contract-Specific Cost Tracking -->
-                    <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[400px] sm:min-h-[450px] lg:min-h-[500px]">
-                        <div class="aspect-video bg-gradient-to-br from-orange-100 to-orange-200 relative overflow-hidden flex items-center justify-center">
-                            <img src="/assects/home/inside section/12470256_Wavy_Tech-04_Single-01.png" alt="Contract Cost Tracking" class="w-3/4 h-3/4 object-contain rounded-xl">
-                        </div>
-                        <div class="p-4 sm:p-6 lg:p-8 flex flex-col flex-grow">
-                            <div class="mb-3">
-                                <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Feature</span>
+                        <!-- Card 3: Contract-Specific Cost Tracking -->
+                        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[400px] sm:min-h-[450px] lg:min-h-[500px]">
+                            <div class="aspect-video bg-gradient-to-br from-orange-100 to-orange-200 relative overflow-hidden flex items-center justify-center">
+                                <img src="/assects/home/inside section/12470256_Wavy_Tech-04_Single-01.png" alt="Contract Cost Tracking" class="w-3/4 h-3/4 object-contain rounded-xl">
                             </div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-                                Contract-Specific Cost Tracking
-                            </h3>
-                            <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
-                                Handle complex contracts with precision—task-level tracking, CLINs with separate funding, auto-updated account links on mods, and seamless subcontractor cost flow for audit-ready compliance.
-                            </p>
-                            <button class="w-full bg-[#074e94] hover:bg-[#074e94]/90 text-white px-6 py-3 rounded-full font-medium transition-colors duration-200 shadow-lg hover:shadow-xl mt-auto">
-                                Learn more
-                            </button>
+                            <div class="p-4 sm:p-6 lg:p-8 flex flex-col flex-grow">
+                                <div class="mb-3">
+                                    <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Feature</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                                    Contract-Specific Cost Tracking
+                                </h3>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+                                    Handle complex contracts with precision—task-level tracking, CLINs with separate funding, auto-updated account links on mods, and seamless subcontractor cost flow for audit-ready compliance.
+                                </p>
+                                <button class="w-full bg-[#074e94] hover:bg-[#074e94]/90 text-white px-6 py-3 rounded-full font-medium transition-colors duration-200 shadow-lg hover:shadow-xl mt-auto">
+                                    Learn more
+                                </button>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Card 4: Pre-Award Gov Audit Support -->
-                    <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[400px] sm:min-h-[450px] lg:min-h-[500px]">
-                        <div class="aspect-video bg-gradient-to-br from-purple-100 to-purple-200 relative overflow-hidden flex items-center justify-center">
-                            <img src="/assects/home/inside section/challange-1-1.png" alt="Pre-Award Audit Support" class="w-3/4 h-3/4 object-contain rounded-xl">
-                        </div>
-                        <div class="p-4 sm:p-6 lg:p-8 flex flex-col flex-grow">
-                            <div class="mb-3">
-                                <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Feature</span>
+                        <!-- Card 4: Pre-Award Gov Audit Support -->
+                        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[400px] sm:min-h-[450px] lg:min-h-[500px]">
+                            <div class="aspect-video bg-gradient-to-br from-purple-100 to-purple-200 relative overflow-hidden flex items-center justify-center">
+                                <img src="/assects/home/inside section/challange-1-1.png" alt="Pre-Award Audit Support" class="w-3/4 h-3/4 object-contain rounded-xl">
                             </div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-                                Pre-Award Gov Audit Support
-                            </h3>
-                            <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
-                                Build confidence before the audit with structured system docs, user access control, policy manuals, and staff training. Run internal mock audits and organize all records to meet DCAA standards.
-                            </p>
-                            <button class="w-full bg-[#074e94] hover:bg-[#074e94]/90 text-white px-6 py-3 rounded-full font-medium transition-colors duration-200 shadow-lg hover:shadow-xl mt-auto">
-                                Learn more
-                            </button>
+                            <div class="p-4 sm:p-6 lg:p-8 flex flex-col flex-grow">
+                                <div class="mb-3">
+                                    <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Feature</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                                    Pre-Award Gov Audit Support
+                                </h3>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+                                    Build confidence before the audit with structured system docs, user access control, policy manuals, and staff training. Run internal mock audits and organize all records to meet DCAA standards.
+                                </p>
+                                <button class="w-full bg-[#074e94] hover:bg-[#074e94]/90 text-white px-6 py-3 rounded-full font-medium transition-colors duration-200 shadow-lg hover:shadow-xl mt-auto">
+                                    Learn more
+                                </button>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Card 5: Post-Award Audit Readiness -->
-                    <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[400px] sm:min-h-[450px] lg:min-h-[500px]">
-                        <div class="aspect-video bg-gradient-to-br from-green-100 to-green-200 relative overflow-hidden flex items-center justify-center">
-                            <img src="/assects/home/inside section/Quran-learning-fees-return-policy-at-TarteeleQuran.png" alt="Post-Award Audit Readiness" class="w-3/4 h-3/4 object-contain rounded-xl">
-                        </div>
-                        <div class="p-4 sm:p-6 lg:p-8 flex flex-col flex-grow">
-                            <div class="mb-3">
-                                <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Feature</span>
+                        <!-- Card 5: Post-Award Audit Readiness -->
+                        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[400px] sm:min-h-[450px] lg:min-h-[500px]">
+                            <div class="aspect-video bg-gradient-to-br from-green-100 to-green-200 relative overflow-hidden flex items-center justify-center">
+                                <img src="/assects/home/inside section/Quran-learning-fees-return-policy-at-TarteeleQuran.png" alt="Post-Award Audit Readiness" class="w-3/4 h-3/4 object-contain rounded-xl">
                             </div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-                                Post-Award Audit Readiness
-                            </h3>
-                            <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
-                                Be fully prepared post-award with real-time DCAA reporting, traceable data from time entry to billing, and expert guidance throughout the audit. Our team ensures every question is backed by clear data.
-                            </p>
-                            <button class="w-full bg-[#074e94] hover:bg-[#074e94]/90 text-white px-6 py-3 rounded-full font-medium transition-colors duration-200 shadow-lg hover:shadow-xl mt-auto">
-                                Learn more
-                            </button>
+                            <div class="p-4 sm:p-6 lg:p-8 flex flex-col flex-grow">
+                                <div class="mb-3">
+                                    <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Feature</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                                    Post-Award Audit Readiness
+                                </h3>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+                                    Be fully prepared post-award with real-time DCAA reporting, traceable data from time entry to billing, and expert guidance throughout the audit. Our team ensures every question is backed by clear data.
+                                </p>
+                                <button class="w-full bg-[#074e94] hover:bg-[#074e94]/90 text-white px-6 py-3 rounded-full font-medium transition-colors duration-200 shadow-lg hover:shadow-xl mt-auto">
+                                    Learn more
+                                </button>
                         </div>
                     </div>
-                </div>
-            </div>
+                            </div>
+                        </div>
 
             <!-- Mobile: Single Card Carousel -->
             <div class="md:hidden">
@@ -785,7 +785,7 @@
                                     </button>
                                 </div>
                             </div>
-                        </div>
+                    </div>
 
                         <!-- Mobile Card 5 -->
                         <div class="w-full flex-shrink-0 px-4">
