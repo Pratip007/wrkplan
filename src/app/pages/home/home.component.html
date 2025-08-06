@@ -61,7 +61,61 @@
             </div>
         </div>
         <!-- Tab Navigation - Progress Bar Design -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+        <!-- Mobile: Horizontal Scrollable Row -->
+        <div class="md:hidden w-full overflow-x-auto scrollbar-hide mb-4">
+            <div class="flex gap-3 px-4 min-w-max">
+                <button
+                    class="tab-button text-left p-4 rounded-lg transition-all duration-300 relative h-full whitespace-nowrap flex-shrink-0 min-w-[280px]"
+                    [class.bg-[#d2fae5]]="currentTab === 'dcaa-compliance'"
+                    [class.bg-white]="currentTab !== 'dcaa-compliance'"
+                    [class.active]="currentTab === 'dcaa-compliance'"
+                    (click)="switchTab('dcaa-compliance')"
+                >
+                    <div class="absolute left-0 top-0 w-1 rounded-l-lg tab-indicator transition-all duration-500 h-full"
+                         [class.bg-[#074e94]]="currentTab === 'dcaa-compliance'"
+                         [class.bg-transparent]="currentTab !== 'dcaa-compliance'"
+                         [style.height]="getProgressBarHeight('dcaa-compliance')">
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-1 text-base">DCAA Complience Solutions</h3>
+                    <p class="text-sm text-gray-600">Built-in compliance features for government contractors</p>
+                </button>
+
+                <button
+                    class="tab-button text-left p-4 rounded-lg transition-all duration-300 relative h-full whitespace-nowrap flex-shrink-0 min-w-[280px]"
+                    [class.bg-[#d2fae5]]="currentTab === 'contract-management'"
+                    [class.bg-white]="currentTab !== 'contract-management'"
+                    [class.active]="currentTab === 'contract-management'"
+                    (click)="switchTab('contract-management')"
+                >
+                    <div class="absolute left-0 top-0 w-1 rounded-l-lg tab-indicator transition-all duration-500 h-full"
+                         [class.bg-[#074e94]]="currentTab === 'contract-management'"
+                         [class.bg-transparent]="currentTab !== 'contract-management'"
+                         [style.height]="getProgressBarHeight('contract-management')">
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-1 text-base">Contract Management Excellence</h3>
+                    <p class="text-sm text-gray-600">DCAA Complience Solutions:</p>
+                </button>
+
+                <button
+                    class="tab-button text-left p-4 rounded-lg transition-all duration-300 relative h-full whitespace-nowrap flex-shrink-0 min-w-[280px]"
+                    [class.bg-[#d2fae5]]="currentTab === 'workforce-management'"
+                    [class.bg-white]="currentTab !== 'workforce-management'"
+                    [class.active]="currentTab === 'workforce-management'"
+                    (click)="switchTab('workforce-management')"
+                >
+                    <div class="absolute left-0 top-0 w-1 rounded-l-lg tab-indicator transition-all duration-500 h-full"
+                         [class.bg-[#074e94]]="currentTab === 'workforce-management'"
+                         [class.bg-transparent]="currentTab !== 'workforce-management'"
+                         [style.height]="getProgressBarHeight('workforce-management')">
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-1 text-base">Workforce Management</h3>
+                    <p class="text-sm text-gray-600">Manage timesheets and expenses, as well as sub-contractors, in compliance with DCAA.</p>
+                </button>
+            </div>
+        </div>
+
+        <!-- Desktop: Original Grid Layout -->
+        <div class="hidden md:grid grid-cols-1 md:grid-cols-3 gap-3">
             <button
                 class="tab-button text-left p-4 rounded-lg transition-all duration-300 relative h-full"
                 [class.bg-[#d2fae5]]="currentTab === 'dcaa-compliance'"
@@ -123,7 +177,8 @@
           From timesheets to invoicing, WrkPlan just gets it right. We’re more organized, more confident, and finally in control of our DCAA compliance.
         </p>
         <button class="bg-[#074e94] hover:bg-[#074e94]/90 text-white px-6 py-3 rounded-full text-base font-medium transition-colors duration-200 shadow-lg hover:shadow-xl">
-            Skip the reading and see a demo
+            <span class="lg:hidden">See a demo</span>
+            <span class="hidden lg:inline">Skip the reading and see a demo</span>
         </button>
     </div>
 </section>
@@ -379,7 +434,41 @@
             <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
                 At WrkPlan, we specialize in ERP solutions for government contractors, where <span class="font-semibold">DCAA compliance</span> and <span class="font-semibold">operational excellence</span> make the difference.
             </p>
-            <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <!-- Mobile: Horizontal Scrollable Row -->
+            <div class="lg:hidden w-full overflow-x-auto scrollbar-hide mb-12">
+                <div class="flex gap-3 px-4 min-w-max">
+                    <button class="flex items-center gap-2 px-4 py-3 rounded-lg font-medium transition-all duration-200 whitespace-nowrap flex-shrink-0" [ngClass]="{
+                        'bg-[#d2fae5] text-gray-900': currentVideoCategory === 'federal',
+                        'bg-white text-gray-600 hover:bg-gray-50': currentVideoCategory !== 'federal'
+                    }" (click)="switchVideoCategory('federal')">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                        Federal Contractors
+                    </button>
+                    <button class="flex items-center gap-2 px-4 py-3 rounded-lg font-medium transition-all duration-200 whitespace-nowrap flex-shrink-0" [ngClass]="{
+                        'bg-[#d2fae5] text-gray-900': currentVideoCategory === 'defense',
+                        'bg-white text-gray-600 hover:bg-gray-50': currentVideoCategory !== 'defense'
+                    }" (click)="switchVideoCategory('defense')">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                        Defense Contractors
+                    </button>
+                    <button class="flex items-center gap-2 px-4 py-3 rounded-lg font-medium transition-all duration-200 whitespace-nowrap flex-shrink-0" [ngClass]="{
+                        'bg-[#d2fae5] text-gray-900': currentVideoCategory === 'consulting',
+                        'bg-white text-gray-600 hover:bg-gray-50': currentVideoCategory !== 'consulting'
+                    }" (click)="switchVideoCategory('consulting')">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                        Consulting Services
+                    </button>
+                </div>
+            </div>
+
+            <!-- Desktop: Original Layout -->
+            <div class="hidden lg:flex flex-wrap justify-center gap-4 mb-12">
                 <button class="flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-200" [ngClass]="{
                     'bg-[#d2fae5] text-gray-900': currentVideoCategory === 'federal',
                     'bg-white text-gray-600 hover:bg-gray-50': currentVideoCategory !== 'federal'
@@ -448,10 +537,10 @@
         </div>
         <div class="flex flex-wrap justify-center items-center gap-6 sm:gap-8 lg:gap-12 xl:gap-16 mb-8 sm:mb-12 lg:mb-16">
             <div class="h-20 sm:h-24 lg:h-28 flex items-center">
-                <img src="/assects/home/testimonials/GSA.svg" alt="GSA" class="h-16 sm:h-20 lg:h-24 object-contain">
+                <img src="/assets/home/testimonials/GSA.svg" alt="GSA" class="h-16 sm:h-20 lg:h-24 object-contain">
             </div>
             <div class="h-20 sm:h-24 lg:h-28 flex items-center">
-                <img src="/assects/home/testimonials/DCMA.PNG" alt="DCMA" class="h-16 sm:h-20 lg:h-24 object-contain">
+                <img src="/assets/home/testimonials/DCMA.PNG" alt="DCMA" class="h-16 sm:h-20 lg:h-24 object-contain">
             </div>
             <div class="h-20 sm:h-24 lg:h-28 flex items-center">
                 <img src="/assets/home/testimonials/DFARS.png" alt="DFARS" class="h-16 sm:h-20 lg:h-24 object-contain">
@@ -468,7 +557,8 @@
         </div>
         <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
             <button class="bg-[#074e94] hover:bg-[#074e94]/90 text-white px-6 py-3 rounded-full font-medium transition-colors duration-200 shadow-lg hover:shadow-xl">
-                Read more Government Contractor customer stories
+                <span class="lg:hidden">Read more customer stories</span>
+                <span class="hidden lg:inline">Read more Government Contractor customer stories</span>
             </button>
             <button class="flex items-center gap-2 text-gray-600 hover:text-gray-900 font-medium transition-colors duration-200">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
