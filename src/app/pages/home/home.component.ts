@@ -107,7 +107,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
           description: 'Track contract cost to complete, analyze variance by project, and generate project revenue or EBIT forecasts.'
         }
       ],
-      video: '/assects/home/testimonials/testimoni video.mp4',
+      video: '/assects/home/Solutions Overview/erp overview.mp4',
       image: '/assects/home/hero/erpDashboard.jpg'
     },
     subcontractor: {
@@ -493,7 +493,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
 
   // Carousel functionality for insights section
   currentInsightsPage = 0;
-  totalInsightsPages = 5;
+  totalInsightsPages = 2;
 
   goToInsightsPage(page: number) {
     if (page >= 0 && page < this.totalInsightsPages) {
