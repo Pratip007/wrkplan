@@ -232,7 +232,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   // Hero content data
   private heroData: { [key: string]: HeroData } = {
     'dcaa-compliance': {
-      headline: 'The all-in-one Platform for  Contract Management and Project Accounting',
+      headline: 'One Platform for  Contract Management and Project Accounting',
       subheadline: 'WrkPlan has everything you need to run your contract-based business. Manage your contracts, finances, and workforce in a single platform that\'s easy-to-use and delivers immediate value',
       description: 'WrkPlan has everything you need to run your contract-based business. Manage your contracts, finances, and workforce in a single platform that\'s easy-to-use and delivers immediate value.',
       primaryButton: 'Talk to Sales',
