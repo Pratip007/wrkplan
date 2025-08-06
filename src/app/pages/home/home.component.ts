@@ -186,9 +186,9 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   // Hero content data
   private heroData: { [key: string]: HeroData } = {
     'dcaa-compliance': {
-      headline: 'DCAA Compliance Keeping You Up at Night?',
-      subheadline: 'WrkPlan\'s purpose-built ERP eliminates the guesswork from government contracting.',
-      description: 'Built for government contractors requiring DCAA compliance. Get paid faster, stay audit ready.',
+      headline: 'DCAA Complience Solutions',
+      subheadline: 'The all-in-one platform for contract management and project accounting',
+      description: 'WrkPlan has everything you need to run your contract-based business. Manage your contracts, finances, and workforce in a single platform that\'s easy-to-use and delivers immediate value.',
       primaryButton: 'Talk to Sales',
       secondaryButton: 'Download ebook',
       additionalLink: 'Read our blog: How SYSTOLIC Inc. achieved 94% faster invoicing',
@@ -200,9 +200,9 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       ]
     },
     'contract-management': {
-      headline: 'Take the Complexity Out of Contract Management',
-      subheadline: 'Reduce the friction of managing multiple government contracts with different requirements.',
-      description: 'Manage every aspect of your government contracts in one integrated platform.',
+      headline: 'Contract Management Excellence',
+      subheadline: 'DCAA Compliance Made Simple The Complete ERP Platform for Government Contractors',
+      description: 'Streamline contract management, ensure DCAA compliance, and accelerate cash flow with WrkPlan\'s all-in-one cloud-based ERP solution designed specifically for government contractors.',
       primaryButton: 'Sign up- Its free',
       secondaryButton: 'Learn more',
       additionalLink: 'See how Garcia Information Systems transformed their operations',
@@ -214,17 +214,18 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       ]
     },
     'workforce-management': {
-      headline: 'Streamline Your Workforce<br>Management',
-      subheadline: 'DCAA-compliant time tracking and employee management.',
-      description: 'Manage timesheets, expenses, and subcontractors in compliance with DCAA requirements. Streamline your workforce operations with integrated payroll and performance tracking.',
+      headline: 'Workforce Management',
+      subheadline: 'Manage timesheets and expenses, as well as sub-contractors, in compliance with DCAA.',
+      description: 'DCAA-compliant time tracking and employee management with integrated payroll and performance tracking.',
       primaryButton: 'Schedule a Compliance Demo',
       secondaryButton: 'Get a Free Demo',
       additionalLink: 'Read our blog: How SYSTOLIC Inc. achieved 94% faster invoicing',
       image: '/assects/home/hero/wm.png',
       bulletPoints: [
-        'DCAA-compliant time tracking and expense management',
-        'Seamless payroll integration and employee management',
-        'Comprehensive subcontractor oversight and compliance'
+        'Time and Expense',
+        'Payroll Integration',
+        'Employee Management',
+        'Subcontractor Management'
       ]
     }
   };
