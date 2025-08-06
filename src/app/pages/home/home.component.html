@@ -63,13 +63,13 @@
         <!-- Tab Navigation - Progress Bar Design -->
         <div class="grid md:grid-cols-3 gap-3">
             <button
-                class="tab-button text-left p-4 rounded-lg transition-all duration-300 relative"
+                class="tab-button text-left p-4 rounded-lg transition-all duration-300 relative h-full"
                 [class.bg-[#d2fae5]]="currentTab === 'dcaa-compliance'"
                 [class.bg-white]="currentTab !== 'dcaa-compliance'"
                 [class.active]="currentTab === 'dcaa-compliance'"
                 (click)="switchTab('dcaa-compliance')"
             >
-                <div class="absolute left-0 top-0 w-1 rounded-l-lg tab-indicator transition-all duration-500"
+                <div class="absolute left-0 top-0 w-1 rounded-l-lg tab-indicator transition-all duration-500 h-full"
                      [class.bg-[#074e94]]="currentTab === 'dcaa-compliance'"
                      [class.bg-transparent]="currentTab !== 'dcaa-compliance'"
                      [style.height]="getProgressBarHeight('dcaa-compliance')">
@@ -79,13 +79,13 @@
             </button>
 
             <button
-                class="tab-button text-left p-4 rounded-lg transition-all duration-300 relative"
+                class="tab-button text-left p-4 rounded-lg transition-all duration-300 relative h-full"
                 [class.bg-[#d2fae5]]="currentTab === 'contract-management'"
                 [class.bg-white]="currentTab !== 'contract-management'"
                 [class.active]="currentTab === 'contract-management'"
                 (click)="switchTab('contract-management')"
             >
-                <div class="absolute left-0 top-0 w-1 rounded-l-lg tab-indicator transition-all duration-500"
+                <div class="absolute left-0 top-0 w-1 rounded-l-lg tab-indicator transition-all duration-500 h-full"
                      [class.bg-[#074e94]]="currentTab === 'contract-management'"
                      [class.bg-transparent]="currentTab !== 'contract-management'"
                      [style.height]="getProgressBarHeight('contract-management')">
@@ -95,13 +95,13 @@
             </button>
 
             <button
-                class="tab-button text-left p-4 rounded-lg transition-all duration-300 relative"
+                class="tab-button text-left p-4 rounded-lg transition-all duration-300 relative h-full"
                 [class.bg-[#d2fae5]]="currentTab === 'workforce-management'"
                 [class.bg-white]="currentTab !== 'workforce-management'"
                 [class.active]="currentTab === 'workforce-management'"
                 (click)="switchTab('workforce-management')"
             >
-                <div class="absolute left-0 top-0 w-1 rounded-l-lg tab-indicator transition-all duration-500"
+                <div class="absolute left-0 top-0 w-1 rounded-l-lg tab-indicator transition-all duration-500 h-full"
                      [class.bg-[#074e94]]="currentTab === 'workforce-management'"
                      [class.bg-transparent]="currentTab !== 'workforce-management'"
                      [style.height]="getProgressBarHeight('workforce-management')">

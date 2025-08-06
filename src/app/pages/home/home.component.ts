@@ -402,8 +402,8 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     if (this.currentTab === tabKey) {
       return `${this.progressBarHeight}%`;
     }
-    // Return 0% for inactive tabs to ensure clean state
-    return '0%';
+    // Return 100% for inactive tabs to ensure full height
+    return '100%';
   }
 
   switchVideoCategory(categoryKey: string) {
