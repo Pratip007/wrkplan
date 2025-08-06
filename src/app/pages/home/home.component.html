@@ -2,14 +2,14 @@
 <section class="py-10 lg:py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Main Hero Content -->
-        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16">
-            <!-- Left Content -->
-            <div class="order-2 lg:order-1">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16">
+            <!-- Content (Top on mobile, Left on desktop) -->
+            <div class="order-1">
                 <div id="hero-content">
                     <!-- Content will be dynamically updated -->
-                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight" [innerHTML]="currentHeroData.headline">
+                    <h1 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight" [innerHTML]="currentHeroData.headline">
                     </h1>
-                    <p class="text-lg sm:text-xl text-gray-600 mb-6 leading-relaxed">
+                    <p class="text-base sm:text-lg lg:text-xl text-gray-600 mb-4 sm:mb-6 leading-relaxed">
                         {{ currentHeroData.subheadline }}
                     </p>
                     <!-- <p class="text-base text-gray-700 mb-8 leading-relaxed whitespace-pre-line">
@@ -17,40 +17,40 @@
                     </p> -->
 
                     <!-- Bullet Points -->
-                    <ul class="space-y-3 mb-8">
+                    <ul class="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
                         <li *ngFor="let point of currentHeroData.bulletPoints" class="flex items-start">
-                            <svg class="h-5 w-5 text-emerald-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="h-4 w-4 sm:h-5 sm:w-5 text-emerald-600 mr-2 sm:mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span class="text-gray-700">{{ point }}</span>
+                            <span class="text-sm sm:text-base text-gray-700">{{ point }}</span>
                         </li>
                     </ul>
 
                     <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
-                        <button class="bg-[#074e94] hover:bg-[#074e94]/90 text-white px-6 py-3 rounded-full text-base font-medium transition-colors duration-200 shadow-lg hover:shadow-xl">
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8">
+                        <button class="bg-[#074e94] hover:bg-[#074e94]/90 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-base font-medium transition-colors duration-200 shadow-lg hover:shadow-xl">
                             {{ currentHeroData.primaryButton }}
                         </button>
-                        <button class="bg-white hover:bg-gray-100 text-[#0a182e] px-6 py-3 rounded-full text-base font-medium transition-colors duration-200 shadow-lg hover:shadow-xl">
+                        <button class="bg-white hover:bg-gray-100 text-[#0a182e] px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-base font-medium transition-colors duration-200 shadow-lg hover:shadow-xl">
                             {{ currentHeroData.secondaryButton }}
                         </button>
                     </div>
 
                     <!-- Additional Link -->
                     <div class="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors duration-200 cursor-pointer">
-                        <svg class="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="h-4 w-4 sm:h-5 sm:w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
                         </svg>
-                        <span class="text-sm font-medium">{{ currentHeroData.additionalLink }}</span>
+                        <span class="text-xs sm:text-sm font-medium">{{ currentHeroData.additionalLink }}</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Right Image -->
-            <div class="order-1 lg:order-2">
+            <!-- Image (Bottom on mobile, Right on desktop) -->
+            <div class="order-2 lg:order-2">
                 <div class="relative flex justify-center">
-                    <div id="hero-image" class="w-full h-[400px] sm:h-[350px] lg:h-[500px] overflow-hidden rounded-2xl">
+                    <div id="hero-image" class="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[500px] overflow-hidden rounded-xl sm:rounded-2xl">
                         <img
                             [src]="currentHeroData.image"
                             alt="Hero Image"
@@ -61,7 +61,7 @@
             </div>
         </div>
         <!-- Tab Navigation - Progress Bar Design -->
-        <div class="grid md:grid-cols-3 gap-3">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
             <button
                 class="tab-button text-left p-4 rounded-lg transition-all duration-300 relative h-full"
                 [class.bg-[#d2fae5]]="currentTab === 'dcaa-compliance'"
@@ -116,8 +116,8 @@
 <!-- Enterprise Solutions Section -->
 <section class="bg-white py-12 lg:py-16">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-          Helping Government Contractors Build Their  Success Stories
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          Helping Government Contractors Build Their Success Stories
         </h2>
         <p class="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
           From timesheets to invoicing, WrkPlan just gets it right. We’re more organized, more confident, and finally in control of our DCAA compliance.
@@ -134,7 +134,7 @@
         <!-- Tab Navigation -->
         <div class="flex flex-col items-center gap-4 mb-8">
             <!-- Top Row - 3 Buttons -->
-            <div class="flex justify-center gap-4">
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-4">
                 <button
                     class="flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-200"
                     [class.bg-[#d2fae5]]="currentSolutionsTab === 'budgeting'"
@@ -180,7 +180,7 @@
             </div>
 
             <!-- Bottom Row - 2 Buttons -->
-            <div class="flex justify-center gap-4">
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-4">
                 <button
                     class="flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-200"
                     [class.bg-[#d2fae5]]="currentSolutionsTab === 'insights'"
@@ -219,7 +219,7 @@
         </div>
 
         <!-- Content Area -->
-        <div class="grid lg:grid-cols-2 gap-12 items-start bg-green-100 p-8 rounded-xl">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start bg-green-100 p-4 sm:p-6 lg:p-8 rounded-xl">
                         <!-- Left Content -->
             <div class="space-y-0">
                 <div
@@ -367,24 +367,24 @@
                 </div>
             </div>
         </div>
-        <div class="flex flex-wrap justify-center items-center gap-12 lg:gap-16 mb-16">
-            <div class="h-28 flex items-center">
-                <img src="/assects/home/testimonials/GSA.svg" alt="GSA" class="h-24 object-contain">
+        <div class="flex flex-wrap justify-center items-center gap-6 sm:gap-8 lg:gap-12 xl:gap-16 mb-8 sm:mb-12 lg:mb-16">
+            <div class="h-20 sm:h-24 lg:h-28 flex items-center">
+                <img src="/assects/home/testimonials/GSA.svg" alt="GSA" class="h-16 sm:h-20 lg:h-24 object-contain">
             </div>
-            <div class="h-28 flex items-center">
-                <img src="/assects/home/testimonials/DCMA.PNG" alt="DCMA" class="h-24 object-contain">
+            <div class="h-20 sm:h-24 lg:h-28 flex items-center">
+                <img src="/assects/home/testimonials/DCMA.PNG" alt="DCMA" class="h-16 sm:h-20 lg:h-24 object-contain">
             </div>
-            <div class="h-28 flex items-center">
-                <img src="/assects/home/testimonials/DFARS.png" alt="DFARS" class="h-24 object-contain">
+            <div class="h-20 sm:h-24 lg:h-28 flex items-center">
+                <img src="/assets/home/testimonials/DFARS.png" alt="DFARS" class="h-16 sm:h-20 lg:h-24 object-contain">
             </div>
-            <div class="h-28 flex items-center">
-                <img src="/assects/home/testimonials/Defense_Contract_Audit_Agency.jpg" alt="Defense Contract Audit Agency" class="h-24 object-contain">
+            <div class="h-20 sm:h-24 lg:h-28 flex items-center">
+                <img src="/assets/home/testimonials/Defense_Contract_Audit_Agency.jpg" alt="Defense Contract Audit Agency" class="h-16 sm:h-20 lg:h-24 object-contain">
             </div>
-            <div class="h-28 flex items-center">
-                <img src="/assects/home/testimonials/US Defense.png" alt="US Defense" class="h-24 object-contain">
+            <div class="h-20 sm:h-24 lg:h-28 flex items-center">
+                <img src="/assets/home/testimonials/US Defense.png" alt="US Defense" class="h-16 sm:h-20 lg:h-24 object-contain">
             </div>
-            <div class="h-28 flex items-center">
-                <img src="/assects/home/testimonials/Fedral_government-removebg-preview.png" alt="Federal Government" class="h-24 object-contain">
+            <div class="h-20 sm:h-24 lg:h-28 flex items-center">
+                <img src="/assets/home/testimonials/Fedral_government-removebg-preview.png" alt="Federal Government" class="h-16 sm:h-20 lg:h-24 object-contain">
             </div>
         </div>
         <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
@@ -418,13 +418,13 @@
             <div class="overflow-hidden">
                 <div id="cards-container" class="flex transition-transform duration-500 ease-in-out bg-transparent">
                     <!-- Card Set 1 -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 min-w-full">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 min-w-full">
                         <!-- Card 1: Pre-Configured Chart of Accounts -->
-                        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[500px]">
+                        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[400px] sm:min-h-[450px] lg:min-h-[500px]">
                             <div class="aspect-video bg-gradient-to-br from-emerald-100 to-emerald-200 relative overflow-hidden flex items-center justify-center">
                                 <img src="/assects/home/inside section/11668652_20945245.png" alt="DCAA Chart of Accounts" class="w-3/4 h-3/4 object-contain rounded-xl">
                             </div>
-                            <div class="p-8 flex flex-col flex-grow">
+                            <div class="p-4 sm:p-6 lg:p-8 flex flex-col flex-grow">
                                 <div class="mb-3">
                                     <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Feature</span>
                                 </div>
@@ -441,11 +441,11 @@
                         </div>
 
                         <!-- Card 2: Integrated A/R, A/P & General Ledger -->
-                        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[500px]">
+                        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[400px] sm:min-h-[450px] lg:min-h-[500px]">
                             <div class="aspect-video bg-gradient-to-br from-blue-100 to-blue-200 relative overflow-hidden flex items-center justify-center">
                                 <img src="/assects/home/inside section/11669146_20943762.png" alt="Integrated AR AP GL" class="w-3/4 h-3/4 object-contain rounded-xl">
                             </div>
-                            <div class="p-8 flex flex-col flex-grow">
+                            <div class="p-4 sm:p-6 lg:p-8 flex flex-col flex-grow">
                                 <div class="mb-3">
                                     <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Feature</span>
                                 </div>
@@ -462,11 +462,11 @@
                         </div>
 
                         <!-- Card 3: Contract-Specific Cost Tracking -->
-                        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[500px]">
+                        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[400px] sm:min-h-[450px] lg:min-h-[500px]">
                             <div class="aspect-video bg-gradient-to-br from-orange-100 to-orange-200 relative overflow-hidden flex items-center justify-center">
                                 <img src="/assects/home/inside section/12470256_Wavy_Tech-04_Single-01.png" alt="Contract Cost Tracking" class="w-3/4 h-3/4 object-contain rounded-xl">
                             </div>
-                            <div class="p-8 flex flex-col flex-grow">
+                            <div class="p-4 sm:p-6 lg:p-8 flex flex-col flex-grow">
                                 <div class="mb-3">
                                     <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Feature</span>
                                 </div>
@@ -486,13 +486,13 @@
                     </div>
 
                     <!-- Card Set 2 -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 min-w-full">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 min-w-full">
                         <!-- Card 4: Pre-Award Gov Audit Support -->
-                        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[500px]">
+                        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[400px] sm:min-h-[450px] lg:min-h-[500px]">
                             <div class="aspect-video bg-gradient-to-br from-purple-100 to-purple-200 relative overflow-hidden flex items-center justify-center">
                                 <img src="/assects/home/inside section/challange-1-1.png" alt="Pre-Award Audit Support" class="w-3/4 h-3/4 object-contain rounded-xl">
                             </div>
-                            <div class="p-8 flex flex-col flex-grow">
+                            <div class="p-4 sm:p-6 lg:p-8 flex flex-col flex-grow">
                                 <div class="mb-3">
                                     <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Feature</span>
                                 </div>
@@ -509,11 +509,11 @@
                         </div>
 
                         <!-- Card 5: Post-Award Audit Readiness -->
-                        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[500px]">
+                        <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-200 mb-4 min-h-[400px] sm:min-h-[450px] lg:min-h-[500px]">
                             <div class="aspect-video bg-gradient-to-br from-green-100 to-green-200 relative overflow-hidden flex items-center justify-center">
                                 <img src="/assects/home/inside section/Quran-learning-fees-return-policy-at-TarteeleQuran.png" alt="Post-Award Audit Readiness" class="w-3/4 h-3/4 object-contain rounded-xl">
                             </div>
-                            <div class="p-8 flex flex-col flex-grow">
+                            <div class="p-4 sm:p-6 lg:p-8 flex flex-col flex-grow">
                                 <div class="mb-3">
                                     <span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Feature</span>
                                 </div>
@@ -575,11 +575,11 @@
 </section>
 
 
-<!-- Contact Section -->
-<section class="pt-4 pb-24 lg:pt-8 lg:pb-32 bg-green-50">
+        <!-- Contact Section -->
+<section class="pt-4 pb-12 sm:pb-16 lg:pt-8 lg:pb-24 xl:pb-32 bg-green-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="bg-[#dceaf9] rounded-xl shadow-2xl overflow-hidden">
-      <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 p-8 lg:p-12">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-12 p-4 sm:p-6 lg:p-8 xl:p-12">
         <!-- Left Side - Contact Information -->
         <div>
           <h2 class="text-3xl lg:text-4xl font-bold mb-4" style="color: #0a182e;">
