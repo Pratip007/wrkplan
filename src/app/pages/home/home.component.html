@@ -231,7 +231,7 @@
                         class="w-full text-left p-6 bg-transparent hover:bg-white/50 transition-colors duration-200 flex items-center justify-between"
                         (click)="toggleSection(section.id)"
                     >
-                        <h4 class="text-xl font-bold text-gray-900">{{ section.title }}</h4>
+                        <h4 class="text-lg font-bold text-gray-900">{{ section.title }}</h4>
                         <svg
                             class="w-6 h-6 text-gray-400 transition-transform duration-200"
                             [class.rotate-180]="isSectionExpanded(section.id)"
@@ -250,7 +250,7 @@
                         [class.max-h-screen]="isSectionExpanded(section.id)"
                     >
                         <div class="p-6 pt-0 bg-transparent">
-                            <p class="text-gray-600 leading-relaxed mb-4">{{ section.description }}</p>
+                            <p class="text-sm text-gray-600 leading-relaxed mb-4">{{ section.description }}</p>
                             <button class="bg-[#074e94] hover:bg-[#074e94]/90 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200">
                                 {{ solutionsTabData[currentSolutionsTab].cta }}
                             </button>
@@ -260,7 +260,7 @@
             </div>
 
             <!-- Right Dashboard -->
-            <div class="lg:sticky lg:top-8">
+            <div class="lg:sticky lg:top-8 flex items-center justify-center h-full">
                 <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
                     <!-- Video for Overview and Budgeting tabs -->
                     <video *ngIf="(currentSolutionsTab === 'overview' || currentSolutionsTab === 'budgeting') && solutionsTabData[currentSolutionsTab].video"
