@@ -225,15 +225,15 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
           description: 'Incurred cost submissions to the Defense Contract Audit Agency (DCAA) are required for all contracts where the Federal Acquisition Regulation (FAR) clause 52.216-7 is imposed. This process can take up a considerable amount of time and effort for your company or accountant to prepare. WrkPlan\'s optional Incurred Cost module produces those schedules in minutes!'
         }
       ],
-      image: '/assects/home/Solutions Overview/finance management.png'
+      image: '/assects/home/Solutions Overview/image.png'
     }
   };
 
   // Hero content data
   private heroData: { [key: string]: HeroData } = {
     'dcaa-compliance': {
-      headline: 'DCAA Compliance Made Simple The Complete ERP Platform for Government Contractors',
-      subheadline: 'Streamline contract management, ensure DCAA compliance, and accelerate cash flow with WrkPlan\'s all-in-one cloud-based ERP solution designed specifically for government contractors',
+      headline: 'DCAA Complience Solutions',
+      subheadline: 'The all-in-one platform for contract management and project accounting',
       description: 'WrkPlan has everything you need to run your contract-based business. Manage your contracts, finances, and workforce in a single platform that\'s easy-to-use and delivers immediate value.',
       primaryButton: 'Talk to Sales',
       secondaryButton: 'Download ebook',
