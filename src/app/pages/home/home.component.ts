@@ -252,7 +252,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       primaryButton: 'Sign up- Its free',
       secondaryButton: 'Learn more',
       additionalLink: 'See how Garcia Information Systems transformed their operations',
-      image: '/assects/home/hero/contract management.png',
+      image: '/assects/home/hero/contract managment.png',
       bulletPoints: [
         'Integrate multiple contract types (CPFF, T&M, Fixed Price)',
         'Collaborate across teams with real-time funding visibility',
