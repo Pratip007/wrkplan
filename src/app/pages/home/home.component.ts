@@ -21,7 +21,7 @@ interface HeroData {
 })
 export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   currentTab = 'dcaa-compliance';
-      currentSolutionsTab = 'overview';
+      currentSolutionsTab = 'budgeting';
   expandedSections: { [key: string]: boolean } = {};
 
   // Video section properties
@@ -71,123 +71,169 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
 
   // Solutions tab data
   solutionsTabData: { [key: string]: any } = {
-    overview: {
-      description: 'Improve the efficiency and productivity of your government contracting organization and transform your team\'s work with <strong>modern Cloud software solutions</strong> built on the <strong style="color: #0a182e;">DCAA-compliant WrkPlan Platform</strong>.',
+    budgeting: {
+      description: 'WrkPlan streamlines running your day-to-day operations so you can focus on customer satisfaction and growing your enterprise. Our Project Management gives you the tools you need to monitor the entire company or current performance on existing contracts, while the Budgeting and Forecasting module allows you to set targets and plan for the future.',
+      cta: 'Explore Budgeting Features',
       sections: [
         {
-          id: 'overview-erp',
-          title: 'WrkPlan Government Contractor ERP',
-          description: 'Flexible and modular ERP capabilities that help you align your Finance, Operations and Compliance teams through a single source of truth. Empower your people and prepare for the future with an ERP that adapts as your organization evolves.'
+          id: 'budgeting-planning',
+          title: 'Estimating, Tracking and Planning for the Future',
+          description: 'Comprehensive tools for project estimation and future planning with advanced tracking capabilities.'
         },
         {
-          id: 'overview-dcaa',
-          title: 'WrkPlan DCAA Compliance & Audit Support',
-          description: 'Built-in compliance features ensure your accounting system meets all federal requirements with automated cost segregation and audit trails.'
+          id: 'budgeting-analysis',
+          title: 'Project Budget vs. Actuals and Forecast Trends',
+          description: 'Compare planned budgets against actual performance and analyze forecast trends for better decision making.'
         },
         {
-          id: 'overview-contracts',
-          title: 'WrkPlan Contract Management Suite',
-          description: 'Manage multiple government contracts with different requirements, funding sources, and compliance needs in one integrated platform.'
+          id: 'budgeting-control',
+          title: 'Monitor and Control Costs',
+          description: 'Real-time cost monitoring and control mechanisms to keep projects within budget parameters.'
         },
         {
-          id: 'overview-accounting',
-          title: 'WrkPlan Project Accounting & Billing',
-          description: 'Fully integrated project accounting with finance, procurement and payroll for clear financial visibility across all projects.'
+          id: 'budgeting-reporting',
+          title: 'Project Income Statement and Easy Exporting',
+          description: 'Generate comprehensive project income statements with easy exporting and importing options for seamless data management.'
         },
         {
-          id: 'overview-time',
-          title: 'WrkPlan Time & Expense Management',
-          description: 'DCAA-compliant timesheets with mobile accessibility and supervisor approval workflows integrated with payroll and project accounting.'
+          id: 'budgeting-versions',
+          title: 'Multiple Budget Versions and Monthly Budgets by Task',
+          description: 'Create and manage multiple budget versions with detailed monthly budgets broken down by individual tasks.'
         },
         {
-          id: 'overview-invoicing',
-          title: 'WrkPlan Government Invoicing Automation',
-          description: 'Automated SF-1034/1035 invoice generation with built-in compliance features for faster government payment processing.'
+          id: 'budgeting-forecasting',
+          title: 'Contract Cost to Complete and Variance Analysis',
+          description: 'Track contract cost to complete, analyze variance by project, and generate project revenue or EBIT forecasts.'
         }
       ],
       video: '/assects/home/Solutions Overview/erp overview.mp4',
       image: '/assects/home/hero/erpDashboard.jpg'
     },
-    contracts: {
-      description: 'Gain full control and visibility of all your contracts with an easy-to-use, all-in-one solution.',
+    subcontractor: {
+      description: 'Simplify Subcontractor Oversight. Track hours, approvals, payments, and assignments for subcontractors and 1099s.',
+      cta: 'Explore Subcontractor Features',
       sections: [
         {
-          id: 'contracts-management',
-          title: 'Contract Management',
-          description: 'Gain full control and visibility of all your contracts with an easy-to-use, all-in-one solution.'
+          id: 'subcontractor-portal',
+          title: 'Subcontractor Time Entry Portal',
+          description: 'Subcontractors can log time directly into the system—no need to wait for external billing.'
         },
         {
-          id: 'contracts-purchasing',
-          title: 'Purchasing and Inventory',
-          description: 'Streamline procurement processes and manage inventory efficiently across all your government contracts.'
+          id: 'subcontractor-approval',
+          title: 'Approval Workflow',
+          description: 'Supervisors can review, return, or approve subcontractor entries with ease.'
         },
         {
-          id: 'contracts-opportunity',
-          title: 'Opportunity Management',
-          description: 'Track and manage business opportunities from initial identification through contract award.'
+          id: 'subcontractor-voucher',
+          title: 'Voucher Integration',
+          description: 'Approved time flows directly into accounts payable for payment processing.'
+        },
+        {
+          id: 'subcontractor-cost',
+          title: 'Cost Visibility',
+          description: 'Subcontractor costs are rolled into task- and contract-level reporting in real time.'
+        },
+        {
+          id: 'subcontractor-benefits',
+          title: 'Key Benefits',
+          description: 'Accelerate subcontractor billing and payment • Maintain compliance with clean timekeeping and approvals • Increase visibility into total labor costs—employee and subcontractor'
+        }
+      ],
+      image: '/assects/home/Solutions Overview/workforse management.png'
+    },
+    purchasing: {
+      description: 'Procurement That Powers Your Projects. Efficiently manage direct materials, inventory items, and indirect purchases with real-time cost tracking.',
+      cta: 'Explore the Purchasing Module',
+      sections: [
+        {
+          id: 'purchasing-tracking',
+          title: 'Real-Time Inventory Tracking',
+          description: 'FIFO, LIFO, or average cost methods'
+        },
+        {
+          id: 'purchasing-warehouse',
+          title: 'Multi-Warehouse Support',
+          description: 'Track inventory across multiple locations'
+        },
+        {
+          id: 'purchasing-reorder',
+          title: 'Automated Reorder Points',
+          description: 'Set minimum quantities and standard reorder amounts'
+        },
+        {
+          id: 'purchasing-charging',
+          title: 'Direct Material Charging',
+          description: 'Automatically charge materials to specific projects'
+        },
+        {
+          id: 'purchasing-vendor',
+          title: 'Vendor Management',
+          description: 'Maintain supplier information and purchase history'
+        },
+        {
+          id: 'purchasing-po',
+          title: 'Purchase Order Generation',
+          description: 'Create and track POs with approval workflows'
+        },
+        {
+          id: 'purchasing-receiving',
+          title: 'Receiving & Inspection',
+          description: 'Match receipts to purchase orders'
         }
       ],
       image: '/assects/home/Solutions Overview/contract management.webp'
     },
-    finance: {
-      description: 'Manage your transactions, costs, and revenue in one fully-integrated system.',
+    insights: {
+      description: 'Procurement and Inventory—Simplified. WrkPlan streamlines the full purchasing lifecycle from requisition to PO and inventory tracking. Save time and eliminate bottlenecks.',
+      cta: 'Explore Business Insights',
       sections: [
         {
-          id: 'finance-project',
-          title: 'Project Accounting',
-          description: 'Comprehensive project accounting with real-time cost tracking, revenue recognition, and financial reporting across all government contracts.'
+          id: 'insights-inventory',
+          title: 'Inventory Valuation',
+          description: 'Real-time inventory values and turnover analysis'
         },
         {
-          id: 'finance-rates',
-          title: 'Indirect Rates',
-          description: 'Automated indirect rate calculations and management to ensure DCAA compliance and accurate cost allocation.'
+          id: 'insights-purchase',
+          title: 'Purchase Analysis',
+          description: 'Spending by vendor, category, and project'
         },
         {
-          id: 'finance-incurred',
-          title: 'Incurred Cost Submission',
-          description: 'Streamlined preparation and submission of incurred cost proposals with built-in compliance features.'
+          id: 'insights-aging',
+          title: 'Inventory Aging',
+          description: 'Identify slow-moving or obsolete inventory'
         },
         {
-          id: 'finance-budgeting',
-          title: 'Budgeting and Forecasting',
-          description: 'Advanced budgeting and forecasting tools with scenario planning and variance analysis for better financial control.'
+          id: 'insights-variance',
+          title: 'Cost Variance Reports',
+          description: 'Compare actual vs. budgeted material costs'
+        },
+        {
+          id: 'insights-vendor',
+          title: 'Vendor Performance',
+          description: 'Delivery times, quality metrics, and pricing trends'
         }
       ],
       image: '/assects/home/Solutions Overview/finance management.png'
     },
-    workforce: {
-      description: 'Manage timesheets and expenses, as well as sub-contractors, in compliance with DCAA.',
+    incurred: {
+      description: 'Incurred Cost Submission in Minutes. Automatically generate 16 ICE schedules (A–O) using your existing data. No spreadsheets, no scrambling, no stress.',
+      cta: 'See ICE Automation in Action',
       sections: [
         {
-          id: 'workforce-time',
-          title: 'Time and Expense',
-          description: 'DCAA-compliant time tracking and expense management with mobile accessibility and supervisor approval workflows.'
-        },
-        {
-          id: 'workforce-payroll',
-          title: 'Payroll Integration',
-          description: 'Seamless integration with payroll systems for accurate time and expense processing and reporting.'
-        },
-        {
-          id: 'workforce-employee',
-          title: 'Employee Management',
-          description: 'Comprehensive employee management with performance tracking, skill management, and compliance monitoring.'
-        },
-        {
-          id: 'workforce-subcontractor',
-          title: 'Sub-Contractor Management',
-          description: 'Streamlined subcontractor management with performance tracking, compliance monitoring, and payment processing.'
+          id: 'incurred-automation',
+          title: 'ICE Automation',
+          description: 'Incurred cost submissions to the Defense Contract Audit Agency (DCAA) are required for all contracts where the Federal Acquisition Regulation (FAR) clause 52.216-7 is imposed. This process can take up a considerable amount of time and effort for your company or accountant to prepare. WrkPlan\'s optional Incurred Cost module produces those schedules in minutes!'
         }
       ],
-      image: '/assects/home/Solutions Overview/workforse management.png'
+      image: '/assects/home/Solutions Overview/finance management.png'
     }
   };
 
   // Hero content data
   private heroData: { [key: string]: HeroData } = {
     'dcaa-compliance': {
-      headline: 'DCAA Complience Solutions',
-      subheadline: 'The all-in-one platform for contract management and project accounting',
+      headline: 'DCAA Compliance Made Simple The Complete ERP Platform for Government Contractors',
+      subheadline: 'Streamline contract management, ensure DCAA compliance, and accelerate cash flow with WrkPlan\'s all-in-one cloud-based ERP solution designed specifically for government contractors',
       description: 'WrkPlan has everything you need to run your contract-based business. Manage your contracts, finances, and workforce in a single platform that\'s easy-to-use and delivers immediate value.',
       primaryButton: 'Talk to Sales',
       secondaryButton: 'Download ebook',
@@ -278,8 +324,8 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     // Clear expanded sections when switching tabs
     this.expandedSections = {};
 
-    // Ensure video plays when Overview tab is selected
-    if (tabKey === 'overview') {
+    // Ensure video plays when Overview or Budgeting tab is selected
+    if (tabKey === 'overview' || tabKey === 'budgeting') {
       this.ensureVideoPlays();
     }
   }
@@ -358,7 +404,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   private forceVideoPlay(video: HTMLVideoElement) {
-    if (video && this.currentSolutionsTab === 'overview') {
+    if (video && (this.currentSolutionsTab === 'overview' || this.currentSolutionsTab === 'budgeting')) {
       // Set video properties
       video.muted = true;
       video.autoplay = true;
@@ -381,7 +427,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     intervals.forEach(delay => {
       setTimeout(() => {
         const video = document.querySelector('video') as HTMLVideoElement;
-        if (video && this.currentSolutionsTab === 'overview') {
+        if (video && (this.currentSolutionsTab === 'overview' || this.currentSolutionsTab === 'budgeting')) {
           this.forceVideoPlay(video);
         }
       }, delay);
@@ -402,7 +448,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     attempts.forEach(delay => {
       setTimeout(() => {
         const video = document.querySelector('video') as HTMLVideoElement;
-        if (video && this.currentSolutionsTab === 'overview') {
+        if (video && (this.currentSolutionsTab === 'overview' || this.currentSolutionsTab === 'budgeting')) {
           this.forceVideoPlay(video);
         }
       }, delay);
@@ -411,7 +457,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     // Set up interval to ensure video keeps playing
     setInterval(() => {
       const video = document.querySelector('video') as HTMLVideoElement;
-      if (video && video.paused && this.currentSolutionsTab === 'overview') {
+      if (video && video.paused && (this.currentSolutionsTab === 'overview' || this.currentSolutionsTab === 'budgeting')) {
         this.forceVideoPlay(video);
       }
     }, 2000);
@@ -475,3 +521,4 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     }
   }
 }
+

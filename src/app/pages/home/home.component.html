@@ -117,15 +117,10 @@
 <section class="bg-white py-12 lg:py-16">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Government contractor ERP solutions for every team
+            GovCon ERP Designed for Smarter Contract Success
         </h2>
         <p class="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
-            WrkPlan provides
-            <span class="text-emerald-600 font-semibold">Finance</span>,
-            <span class="text-emerald-600 font-semibold">Operations</span>,
-            <span class="text-gray-900 font-semibold">Compliance</span> and
-            <span class="text-gray-900 font-semibold">Project Management</span>
-            leaders with the digital capabilities, tools & insights they need to drive key outcomes.
+            From cost control to compliance, our ERP gives your team the tools to manage every detail of GovCon projects while staying ahead of audits and deadlines.
         </p>
         <button class="bg-[#074e94] hover:bg-[#074e94]/90 text-white px-6 py-3 rounded-full text-base font-medium transition-colors duration-200 shadow-lg hover:shadow-xl">
             Skip the reading and see a demo
@@ -140,59 +135,73 @@
         <div class="flex flex-wrap justify-center gap-2 mb-8">
             <button
                 class="flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-200"
-                [class.bg-[#d2fae5]]="currentSolutionsTab === 'overview'"
-                [class.text-wrkplan-dark]="currentSolutionsTab === 'overview'"
-                [class.bg-white]="currentSolutionsTab !== 'overview'"
-                [class.text-gray-600]="currentSolutionsTab !== 'overview'"
-                [class.hover:bg-gray-50]="currentSolutionsTab !== 'overview'"
-                (click)="switchSolutionsTab('overview')"
-            >
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
-                </svg>
-                Overview
-            </button>
-            <button
-                class="flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-200"
-                [class.bg-[#d2fae5]]="currentSolutionsTab === 'contracts'"
-                [class.text-wrkplan-dark]="currentSolutionsTab === 'contracts'"
-                [class.bg-white]="currentSolutionsTab !== 'contracts'"
-                [class.text-gray-600]="currentSolutionsTab !== 'contracts'"
-                [class.hover:bg-gray-50]="currentSolutionsTab !== 'contracts'"
-                (click)="switchSolutionsTab('contracts')"
-            >
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                </svg>
-                Contract Management
-            </button>
-            <button
-                class="flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-200"
-                [class.bg-[#d2fae5]]="currentSolutionsTab === 'finance'"
-                [class.text-wrkplan-dark]="currentSolutionsTab === 'finance'"
-                [class.bg-white]="currentSolutionsTab !== 'finance'"
-                [class.text-gray-600]="currentSolutionsTab !== 'finance'"
-                [class.hover:bg-gray-50]="currentSolutionsTab !== 'finance'"
-                (click)="switchSolutionsTab('finance')"
+                [class.bg-[#d2fae5]]="currentSolutionsTab === 'budgeting'"
+                [class.text-wrkplan-dark]="currentSolutionsTab === 'budgeting'"
+                [class.bg-white]="currentSolutionsTab !== 'budgeting'"
+                [class.text-gray-600]="currentSolutionsTab !== 'budgeting'"
+                [class.hover:bg-gray-50]="currentSolutionsTab !== 'budgeting'"
+                (click)="switchSolutionsTab('budgeting')"
             >
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                 </svg>
-                Financial Management
+                Budgeting & Forecasting
             </button>
             <button
                 class="flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-200"
-                [class.bg-[#d2fae5]]="currentSolutionsTab === 'workforce'"
-                [class.text-wrkplan-dark]="currentSolutionsTab === 'workforce'"
-                [class.bg-white]="currentSolutionsTab !== 'workforce'"
-                [class.text-gray-600]="currentSolutionsTab !== 'workforce'"
-                [class.hover:bg-gray-50]="currentSolutionsTab !== 'workforce'"
-                (click)="switchSolutionsTab('workforce')"
+                [class.bg-[#d2fae5]]="currentSolutionsTab === 'subcontractor'"
+                [class.text-wrkplan-dark]="currentSolutionsTab === 'subcontractor'"
+                [class.bg-white]="currentSolutionsTab !== 'subcontractor'"
+                [class.text-gray-600]="currentSolutionsTab !== 'subcontractor'"
+                [class.hover:bg-gray-50]="currentSolutionsTab !== 'subcontractor'"
+                (click)="switchSolutionsTab('subcontractor')"
             >
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                 </svg>
-                Workforce Management
+                Subcontractor Management
+            </button>
+            <button
+                class="flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-200"
+                [class.bg-[#d2fae5]]="currentSolutionsTab === 'purchasing'"
+                [class.text-wrkplan-dark]="currentSolutionsTab === 'purchasing'"
+                [class.bg-white]="currentSolutionsTab !== 'purchasing'"
+                [class.text-gray-600]="currentSolutionsTab !== 'purchasing'"
+                [class.hover:bg-gray-50]="currentSolutionsTab !== 'purchasing'"
+                (click)="switchSolutionsTab('purchasing')"
+            >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+                Purchasing & Inventory
+            </button>
+            <button
+                class="flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-200"
+                [class.bg-[#d2fae5]]="currentSolutionsTab === 'insights'"
+                [class.text-wrkplan-dark]="currentSolutionsTab === 'insights'"
+                [class.bg-white]="currentSolutionsTab !== 'insights'"
+                [class.text-gray-600]="currentSolutionsTab !== 'insights'"
+                [class.hover:bg-gray-50]="currentSolutionsTab !== 'insights'"
+                (click)="switchSolutionsTab('insights')"
+            >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                </svg>
+                Business Insights & Reports
+            </button>
+            <button
+                class="flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-200"
+                [class.bg-[#d2fae5]]="currentSolutionsTab === 'incurred'"
+                [class.text-wrkplan-dark]="currentSolutionsTab === 'incurred'"
+                [class.bg-white]="currentSolutionsTab !== 'incurred'"
+                [class.text-gray-600]="currentSolutionsTab !== 'incurred'"
+                [class.hover:bg-gray-50]="currentSolutionsTab !== 'incurred'"
+                (click)="switchSolutionsTab('incurred')"
+            >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                </svg>
+                Incurred Cost Submission
             </button>
         </div>
 
@@ -215,7 +224,7 @@
                         class="w-full text-left p-6 bg-transparent hover:bg-white/50 transition-colors duration-200 flex items-center justify-between"
                         (click)="toggleSection(section.id)"
                     >
-                        <h4 class="text-xl font-semibold text-gray-900">{{ section.title }}</h4>
+                        <h4 class="text-xl font-bold text-gray-900">{{ section.title }}</h4>
                         <svg
                             class="w-6 h-6 text-gray-400 transition-transform duration-200"
                             [class.rotate-180]="isSectionExpanded(section.id)"
@@ -236,7 +245,7 @@
                         <div class="p-6 pt-0 bg-transparent">
                             <p class="text-gray-600 leading-relaxed mb-4">{{ section.description }}</p>
                             <button class="bg-[#074e94] hover:bg-[#074e94]/90 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200">
-                                Know More
+                                {{ solutionsTabData[currentSolutionsTab].cta }}
                             </button>
                         </div>
                     </div>
@@ -246,10 +255,10 @@
             <!-- Right Dashboard -->
             <div class="lg:sticky lg:top-8">
                 <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
-                    <!-- Video for Overview tab -->
-                    <video *ngIf="currentSolutionsTab === 'overview' && solutionsTabData[currentSolutionsTab].video"
+                    <!-- Video for Overview and Budgeting tabs -->
+                    <video *ngIf="(currentSolutionsTab === 'overview' || currentSolutionsTab === 'budgeting') && solutionsTabData[currentSolutionsTab].video"
                            [src]="solutionsTabData[currentSolutionsTab].video"
-                           #overviewVideo
+                           #solutionsVideo
                            autoplay
                            muted
                            loop
@@ -264,7 +273,7 @@
                         Your browser does not support the video tag.
                     </video>
                     <!-- Image for other tabs -->
-                    <img *ngIf="currentSolutionsTab !== 'overview' || !solutionsTabData[currentSolutionsTab].video"
+                    <img *ngIf="(currentSolutionsTab !== 'overview' && currentSolutionsTab !== 'budgeting') || !solutionsTabData[currentSolutionsTab].video"
                          [src]="solutionsTabData[currentSolutionsTab].image"
                          alt="Dashboard"
                          class="w-full h-auto">
