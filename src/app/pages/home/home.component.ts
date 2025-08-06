@@ -206,7 +206,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       primaryButton: 'Sign up- Its free',
       secondaryButton: 'Learn more',
       additionalLink: 'See how Garcia Information Systems transformed their operations',
-      image: '/assects/home/hero/AdobeStock_835753807.jpeg',
+      image: '/assects/home/hero/contract management.png',
       bulletPoints: [
         'Integrate multiple contract types (CPFF, T&M, Fixed Price)',
         'Collaborate across teams with real-time funding visibility',
@@ -220,7 +220,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       primaryButton: 'Schedule a Compliance Demo',
       secondaryButton: 'Get a Free Demo',
       additionalLink: 'Read our blog: How SYSTOLIC Inc. achieved 94% faster invoicing',
-      image: '/assects/home/hero/AdobeStock_974539324.jpeg',
+      image: '/assects/home/hero/wm.png',
       bulletPoints: [
         'DCAA-compliant time tracking and expense management',
         'Seamless payroll integration and employee management',
