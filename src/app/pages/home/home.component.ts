@@ -495,6 +495,10 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   currentInsightsPage = 0;
   totalInsightsPages = 2;
 
+  // Mobile carousel functionality
+  currentMobileInsightsPage = 0;
+  totalMobileInsightsPages = 5; // 5 cards for mobile
+
   goToInsightsPage(page: number) {
     if (page >= 0 && page < this.totalInsightsPages) {
       this.currentInsightsPage = page;
@@ -514,7 +518,27 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     }
   }
 
-    private updateInsightsCarousel() {
+  // Mobile carousel methods
+  goToMobileInsightsPage(page: number) {
+    if (page >= 0 && page < this.totalMobileInsightsPages) {
+      this.currentMobileInsightsPage = page;
+      this.updateMobileInsightsCarousel();
+    }
+  }
+
+  nextMobileInsightsPage() {
+    if (this.currentMobileInsightsPage < this.totalMobileInsightsPages - 1) {
+      this.goToMobileInsightsPage(this.currentMobileInsightsPage + 1);
+    }
+  }
+
+  prevMobileInsightsPage() {
+    if (this.currentMobileInsightsPage > 0) {
+      this.goToMobileInsightsPage(this.currentMobileInsightsPage - 1);
+    }
+  }
+
+  private updateInsightsCarousel() {
     const container = document.getElementById('cards-container');
     if (container) {
       const translateX = -this.currentInsightsPage * 100;
@@ -522,7 +546,13 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     }
   }
 
-
+  private updateMobileInsightsCarousel() {
+    const container = document.getElementById('mobile-cards-container');
+    if (container) {
+      const translateX = -this.currentMobileInsightsPage * 100;
+      container.style.transform = `translateX(${translateX}%)`;
+    }
+  }
 
   private setupTouchSupport() {
     const container = document.getElementById('cards-container');
@@ -543,6 +573,30 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
             this.nextInsightsPage(); // Swipe left - go to next page
           } else {
             this.prevInsightsPage(); // Swipe right - go to previous page
+          }
+        }
+      });
+    }
+
+    // Mobile touch support
+    const mobileContainer = document.getElementById('mobile-cards-container');
+    if (mobileContainer) {
+      let startX = 0;
+      let endX = 0;
+
+      mobileContainer.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+      });
+
+      mobileContainer.addEventListener('touchend', (e) => {
+        endX = e.changedTouches[0].clientX;
+        const diff = startX - endX;
+
+        if (Math.abs(diff) > 50) { // Minimum swipe distance
+          if (diff > 0) {
+            this.nextMobileInsightsPage(); // Swipe left - go to next page
+          } else {
+            this.prevMobileInsightsPage(); // Swipe right - go to previous page
           }
         }
       });
