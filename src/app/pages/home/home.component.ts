@@ -220,9 +220,29 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       cta: 'See ICE Automation in Action',
       sections: [
         {
-          id: 'incurred-automation',
-          title: 'ICE Automation',
-          description: 'Incurred cost submissions to the Defense Contract Audit Agency (DCAA) are required for all contracts where the Federal Acquisition Regulation (FAR) clause 52.216-7 is imposed. This process can take up a considerable amount of time and effort for your company or accountant to prepare. WrkPlan\'s optional Incurred Cost module produces those schedules in minutes!'
+          id: 'incurred-schedules',
+          title: 'Includes all DCAA-required Schedules A- O',
+          description: 'WrkPlan includes all DCAA-required Schedules A–O, ensuring full compliance with government audit standards. From indirect rate calculations to cost submissions, everything is structured for accurate reporting and easy review by DCAA.'
+        },
+        {
+          id: 'incurred-ledger',
+          title: 'No double entry- built on your ledger data',
+          description: 'Say goodbye to redundant data entry. WrkPlan integrates directly with your general ledger, ensuring that every financial detail—from billing to compliance reporting—is accurate, consistent, and aligned with DCAA requirements.'
+        },
+        {
+          id: 'incurred-audit',
+          title: 'Audit-Ready Outputs, Rate + Pool Consistency',
+          description: 'Ensure audit-ready outputs with consistent application of indirect rates and cost pools. The system maintains alignment across financial statements, schedules, and submissions to meet DCAA audit expectations.'
+        },
+        {
+          id: 'incurred-forms',
+          title: 'Forms built for easy DCAA submission',
+          description: 'Pre-formatted forms are structured to meet DCAA standards, making it easy to generate, review, and submit required schedules with confidence and accuracy.'
+        },
+        {
+          id: 'incurred-sync',
+          title: 'Sync rate data with ledger and submissions',
+          description: 'Rate calculations are seamlessly integrated with ledger entries and submission outputs for accurate, audit-ready financials.'
         }
       ],
       image: '/assects/home/Solutions Overview/image.png'
@@ -252,7 +272,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       primaryButton: 'Sign up- Its free',
       secondaryButton: 'Learn more',
       additionalLink: 'See how Garcia Information Systems transformed their operations',
-      image: '/assects/home/hero/contract management.png',
+      image: '/assects/home/hero/Untitled design (4).png',
       bulletPoints: [
         'Integrate multiple contract types (CPFF, T&M, Fixed Price)',
         'Collaborate across teams with real-time funding visibility',
@@ -266,7 +286,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       primaryButton: 'Schedule a Compliance Demo',
       secondaryButton: 'Get a Free Demo',
       additionalLink: 'Read our blog: How SYSTOLIC Inc. achieved 94% faster invoicing',
-      image: '/assects/home/hero/wm.png',
+      image: '/assects/home/hero/Untitled design (5).png',
       bulletPoints: [
         'Time and Expense',
         'Payroll Integration',
