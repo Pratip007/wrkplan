@@ -32,19 +32,19 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       title: "Accelerating compliance & driving growth",
       description: "Discover how <strong>SYSTOLIC Inc</strong>, a fast-growing government contractor, adopted WrkPlan's intuitive Cloud platform to empower finance teams, drive business growth and increase DCAA compliance.",
       videoTime: "3:24",
-      backgroundImage: "url('/placeholder.svg?height=600&width=1200&text=Government+Building+Skyline+with+Light+Trails')"
+      backgroundImage: "url('/assects/home/testimonials/image.png')"
     },
     defense: {
       title: "Securing defense contracts with confidence",
       description: "Learn how <strong>Garcia Information Systems</strong>, a leading defense contractor, streamlined their operations with WrkPlan's integrated platform to manage complex security clearance requirements and multi-year contracts.",
       videoTime: "4:12",
-      backgroundImage: "url('/placeholder.svg?height=600&width=1200&text=Defense+Facility+with+Security+Elements')"
+      backgroundImage: "url('/assects/home/testimonials/image.png')"
     },
     consulting: {
       title: "Transforming consulting operations",
       description: "See how <strong>Federal Consulting Group</strong> leveraged WrkPlan's project accounting capabilities to improve billing accuracy, reduce administrative overhead, and accelerate cash flow.",
       videoTime: "2:58",
-      backgroundImage: "url('/placeholder.svg?height=600&width=1200&text=Modern+Office+Building+Consulting')"
+      backgroundImage: "url('/assects/home/testimonials/image.png')"
     }
   };
 
