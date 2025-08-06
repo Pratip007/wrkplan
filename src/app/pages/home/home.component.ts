@@ -23,6 +23,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   currentTab = 'dcaa-compliance';
       currentSolutionsTab = 'budgeting';
   expandedSections: { [key: string]: boolean } = {};
+  isVideoPlaying = false;
 
   // Video section properties
   currentVideoCategory = 'federal';
@@ -106,7 +107,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
           description: 'Track contract cost to complete, analyze variance by project, and generate project revenue or EBIT forecasts.'
         }
       ],
-      video: '/assects/home/Solutions Overview/erp overview.mp4',
+      video: '/assects/home/testimonials/testimoni video.mp4',
       image: '/assects/home/hero/erpDashboard.jpg'
     },
     subcontractor: {
@@ -410,7 +411,14 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   playVideo() {
-    alert('Video would play here - integrate with your video player of choice');
+    const video = document.querySelector('video') as HTMLVideoElement;
+    if (video) {
+      this.forceVideoPlay(video);
+    }
+  }
+
+  playStoryVideo() {
+    this.isVideoPlaying = true;
   }
 
   onVideoLoaded(event: any) {

@@ -332,8 +332,20 @@
         </div>
         <div class="relative rounded-2xl overflow-hidden shadow-2xl mb-12">
             <div class="relative aspect-video bg-gradient-to-br from-gray-900 via-blue-900 to-gray-800">
-                <div class="absolute inset-0 bg-cover bg-center opacity-80" [style.background-image]="currentVideoData.backgroundImage"></div>
-                <div class="absolute inset-0 bg-black bg-opacity-40">
+                <!-- Video Element (Hidden by default) -->
+                <video
+                    #storyVideo
+                    *ngIf="isVideoPlaying"
+                    class="absolute inset-0 w-full h-full object-cover z-10"
+                    controls
+                    autoplay>
+                    <source src="/assects/home/testimonials/story video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <!-- Background and Play Button (Shown when video is not playing) -->
+                <div *ngIf="!isVideoPlaying" class="absolute inset-0 bg-cover bg-center opacity-80" [style.background-image]="currentVideoData.backgroundImage"></div>
+                <div *ngIf="!isVideoPlaying" class="absolute inset-0 bg-black bg-opacity-40">
                     <div class="flex flex-col justify-between h-full p-8 lg:p-12">
                         <div>
                             <h3 class="text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight">{{ currentVideoData.title }}</h3>
@@ -342,7 +354,7 @@
                             <div class="max-w-md">
                                 <p class="text-white text-sm lg:text-base leading-relaxed" [innerHTML]="currentVideoData.description"></p>
                             </div>
-                            <button class="flex items-center gap-3 bg-white bg-opacity-90 hover:bg-opacity-100 text-gray-900 px-8 py-4 rounded-full font-medium transition-all duration-200 shadow-lg hover:shadow-xl" (click)="playVideo()">
+                            <button class="flex items-center gap-3 bg-white bg-opacity-90 hover:bg-opacity-100 text-gray-900 px-8 py-4 rounded-full font-medium transition-all duration-200 shadow-lg hover:shadow-xl" (click)="playStoryVideo()">
                                 <div class="w-10 h-10 bg-[#73ba43] rounded-full flex items-center justify-center">
                                     <svg class="w-5 h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M8 5v14l11-7z"/>
