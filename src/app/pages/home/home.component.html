@@ -61,11 +61,11 @@
             </div>
         </div>
         <!-- Tab Navigation - Progress Bar Design -->
-        <!-- Mobile: Horizontal Scrollable Row -->
-        <div class="md:hidden w-full overflow-x-auto scrollbar-hide mb-4">
-            <div class="flex gap-3 px-4 min-w-max">
+        <!-- Mobile: Vertical Stack Layout -->
+        <div class="md:hidden w-full mb-4">
+            <div class="flex flex-col gap-3 px-4">
                 <button
-                    class="tab-button text-left p-4 rounded-lg transition-all duration-300 relative h-full whitespace-nowrap flex-shrink-0 min-w-[280px]"
+                    class="tab-button text-left p-4 rounded-lg transition-all duration-300 relative w-full"
                     [class.bg-[#d2fae5]]="currentTab === 'dcaa-compliance'"
                     [class.bg-white]="currentTab !== 'dcaa-compliance'"
                     [class.active]="currentTab === 'dcaa-compliance'"
@@ -81,7 +81,7 @@
                 </button>
 
                 <button
-                    class="tab-button text-left p-4 rounded-lg transition-all duration-300 relative h-full whitespace-nowrap flex-shrink-0 min-w-[280px]"
+                    class="tab-button text-left p-4 rounded-lg transition-all duration-300 relative w-full"
                     [class.bg-[#d2fae5]]="currentTab === 'contract-management'"
                     [class.bg-white]="currentTab !== 'contract-management'"
                     [class.active]="currentTab === 'contract-management'"
@@ -97,7 +97,7 @@
                 </button>
 
                 <button
-                    class="tab-button text-left p-4 rounded-lg transition-all duration-300 relative h-full whitespace-nowrap flex-shrink-0 min-w-[280px]"
+                    class="tab-button text-left p-4 rounded-lg transition-all duration-300 relative w-full"
                     [class.bg-[#d2fae5]]="currentTab === 'workforce-management'"
                     [class.bg-white]="currentTab !== 'workforce-management'"
                     [class.active]="currentTab === 'workforce-management'"
@@ -188,11 +188,11 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Tab Navigation -->
         <div class="flex flex-col items-center gap-4 mb-8">
-            <!-- Mobile: Horizontal Scrollable Row -->
-            <div class="lg:hidden w-full overflow-x-auto scrollbar-hide">
-                <div class="flex gap-3 px-4 min-w-max">
+            <!-- Mobile: Vertical Stack Layout -->
+            <div class="lg:hidden w-full">
+                <div class="flex flex-col gap-3 px-4">
                     <button
-                        class="flex items-center gap-2 px-4 py-3 rounded-lg font-medium transition-all duration-200 whitespace-nowrap flex-shrink-0"
+                        class="flex items-center gap-2 px-4 py-3 rounded-lg font-medium transition-all duration-200 w-full"
                         [class.bg-[#d2fae5]]="currentSolutionsTab === 'budgeting'"
                         [class.text-wrkplan-dark]="currentSolutionsTab === 'budgeting'"
                         [class.bg-white]="currentSolutionsTab !== 'budgeting'"
@@ -206,7 +206,7 @@
                         Budgeting & Forecasting
                     </button>
                     <button
-                        class="flex items-center gap-2 px-4 py-3 rounded-lg font-medium transition-all duration-200 whitespace-nowrap flex-shrink-0"
+                        class="flex items-center gap-2 px-4 py-3 rounded-lg font-medium transition-all duration-200 w-full"
                         [class.bg-[#d2fae5]]="currentSolutionsTab === 'subcontractor'"
                         [class.text-wrkplan-dark]="currentSolutionsTab === 'subcontractor'"
                         [class.bg-white]="currentSolutionsTab !== 'subcontractor'"
@@ -220,7 +220,7 @@
                         Subcontractor Management
                     </button>
                     <button
-                        class="flex items-center gap-2 px-4 py-3 rounded-lg font-medium transition-all duration-200 whitespace-nowrap flex-shrink-0"
+                        class="flex items-center gap-2 px-4 py-3 rounded-lg font-medium transition-all duration-200 w-full"
                         [class.bg-[#d2fae5]]="currentSolutionsTab === 'purchasing'"
                         [class.text-wrkplan-dark]="currentSolutionsTab === 'purchasing'"
                         [class.bg-white]="currentSolutionsTab !== 'purchasing'"
@@ -234,7 +234,7 @@
                         Purchasing & Inventory
                     </button>
                     <button
-                        class="flex items-center gap-2 px-4 py-3 rounded-lg font-medium transition-all duration-200 whitespace-nowrap flex-shrink-0"
+                        class="flex items-center gap-2 px-4 py-3 rounded-lg font-medium transition-all duration-200 w-full"
                         [class.bg-[#d2fae5]]="currentSolutionsTab === 'insights'"
                         [class.text-wrkplan-dark]="currentSolutionsTab === 'insights'"
                         [class.bg-white]="currentSolutionsTab !== 'insights'"
@@ -248,7 +248,7 @@
                         Business Insights & Reports
                     </button>
                     <button
-                        class="flex items-center gap-2 px-4 py-3 rounded-lg font-medium transition-all duration-200 whitespace-nowrap flex-shrink-0"
+                        class="flex items-center gap-2 px-4 py-3 rounded-lg font-medium transition-all duration-200 w-full"
                         [class.bg-[#d2fae5]]="currentSolutionsTab === 'incurred'"
                         [class.text-wrkplan-dark]="currentSolutionsTab === 'incurred'"
                         [class.bg-white]="currentSolutionsTab !== 'incurred'"
@@ -428,7 +428,7 @@
 <section class="py-16 lg:py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <h2 class="text-2xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                 Building success for government-focused contractors
             </h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
@@ -498,6 +498,14 @@
                 </button>
             </div>
         </div>
+
+        <!-- Video Content Outside -->
+        <div class="mb-8">
+            <h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 leading-tight text-center">{{ currentVideoData.title }}</h3>
+            <p class="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed max-w-4xl mx-auto text-center" [innerHTML]="currentVideoData.description"></p>
+        </div>
+
+        <!-- Video Container -->
         <div class="relative rounded-2xl overflow-hidden shadow-2xl mb-12">
             <div class="relative aspect-video bg-gradient-to-br from-gray-900 via-blue-900 to-gray-800">
                 <!-- Video Element (Hidden by default) -->
@@ -513,46 +521,36 @@
 
                 <!-- Background and Play Button (Shown when video is not playing) -->
                 <div *ngIf="!isVideoPlaying" class="absolute inset-0 bg-cover bg-center opacity-80" [style.background-image]="currentVideoData.backgroundImage"></div>
-                <div *ngIf="!isVideoPlaying" class="absolute inset-0 bg-black bg-opacity-40">
-                    <div class="flex flex-col justify-between h-full p-8 lg:p-12">
-                        <div>
-                            <h3 class="text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight">{{ currentVideoData.title }}</h3>
-                        </div>
-                        <div class="flex justify-between items-end">
-                            <div class="max-w-md">
-                                <p class="text-white text-sm lg:text-base leading-relaxed" [innerHTML]="currentVideoData.description"></p>
-                            </div>
-                            <button class="flex items-center gap-3 bg-white bg-opacity-90 hover:bg-opacity-100 text-gray-900 px-8 py-4 rounded-full font-medium transition-all duration-200 shadow-lg hover:shadow-xl" (click)="playStoryVideo()">
-                                <div class="w-10 h-10 bg-[#73ba43] rounded-full flex items-center justify-center">
-                                    <svg class="w-5 h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M8 5v14l11-7z"/>
-                                    </svg>
-                                </div>
-                                <span>Play video ({{ currentVideoData.videoTime }})</span>
-                            </button>
-                        </div>
+                <div *ngIf="!isVideoPlaying" class="absolute inset-0 bg-black bg-opacity-30">
+                    <!-- Centered Play Button -->
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <button class="flex items-center justify-center w-20 h-20 bg-[#73ba43] hover:bg-[#73ba43]/90 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-110" (click)="playStoryVideo()">
+                            <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="flex flex-wrap justify-center items-center gap-6 sm:gap-8 lg:gap-12 xl:gap-16 mb-8 sm:mb-12 lg:mb-16">
             <div class="h-20 sm:h-24 lg:h-28 flex items-center">
-                <img src="/assets/home/testimonials/GSA.svg" alt="GSA" class="h-16 sm:h-20 lg:h-24 object-contain">
+                <img src="/assects/home/testimonials/GSA.svg" alt="GSA" class="h-16 sm:h-20 lg:h-24 object-contain">
             </div>
             <div class="h-20 sm:h-24 lg:h-28 flex items-center">
-                <img src="/assets/home/testimonials/DCMA.PNG" alt="DCMA" class="h-16 sm:h-20 lg:h-24 object-contain">
+                <img src="/assects/home/testimonials/DCMA.PNG" alt="DCMA" class="h-16 sm:h-20 lg:h-24 object-contain">
             </div>
             <div class="h-20 sm:h-24 lg:h-28 flex items-center">
-                <img src="/assets/home/testimonials/DFARS.png" alt="DFARS" class="h-16 sm:h-20 lg:h-24 object-contain">
+                <img src="/assects/home/testimonials/DFARS.png" alt="DFARS" class="h-16 sm:h-20 lg:h-24 object-contain">
             </div>
             <div class="h-20 sm:h-24 lg:h-28 flex items-center">
-                <img src="/assets/home/testimonials/Defense_Contract_Audit_Agency.jpg" alt="Defense Contract Audit Agency" class="h-16 sm:h-20 lg:h-24 object-contain">
+                <img src="/assects/home/testimonials/Defense_Contract_Audit_Agency.jpg" alt="Defense Contract Audit Agency" class="h-16 sm:h-20 lg:h-24 object-contain">
             </div>
             <div class="h-20 sm:h-24 lg:h-28 flex items-center">
-                <img src="/assets/home/testimonials/US Defense.png" alt="US Defense" class="h-16 sm:h-20 lg:h-24 object-contain">
+                <img src="/assects/home/testimonials/US Defense.png" alt="US Defense" class="h-16 sm:h-20 lg:h-24 object-contain">
             </div>
             <div class="h-20 sm:h-24 lg:h-28 flex items-center">
-                <img src="/assets/home/testimonials/Fedral_government-removebg-preview.png" alt="Federal Government" class="h-16 sm:h-20 lg:h-24 object-contain">
+                <img src="/assects/home/testimonials/Fedral_government-removebg-preview.png" alt="Federal Government" class="h-16 sm:h-20 lg:h-24 object-contain">
             </div>
         </div>
         <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
@@ -576,7 +574,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Header -->
         <div class="text-center mb-12">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            <h2 class="text-2xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
                 Every Feature Designed for Government Contracting Success
             </h2>
         </div>
@@ -751,9 +749,9 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-12 p-4 sm:p-6 lg:p-8 xl:p-12">
         <!-- Left Side - Contact Information -->
         <div>
-          <h2 class="text-3xl lg:text-4xl font-bold mb-4" style="color: #0a182e;">
-            Get in Touch
-          </h2>
+                      <h2 class="text-2xl lg:text-4xl font-bold mb-4" style="color: #0a182e;">
+              Get in Touch
+            </h2>
           <p class="text-base text-gray-700 mb-8 leading-relaxed">
             Ready to transform your government contracting operations? Connect with our DCAA compliance experts to discover how WRKPLAN can streamline your operations.
           </p>
