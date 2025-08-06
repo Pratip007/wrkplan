@@ -246,7 +246,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       ]
     },
     'contract-management': {
-      headline: 'DCAA Compliance Made Simple  The Complete ERP Platform for Government Contractors',
+      headline: ' The Complete ERP Platform for Government Contractors',
       subheadline: 'Streamline contract management, ensure DCAA compliance, and accelerate cash flow with WrkPlan\'s all-in-one cloud-based ERP solution designed specifically for government contractors',
       description: 'Streamline contract management, ensure DCAA compliance, and accelerate cash flow with WrkPlan\'s all-in-one cloud-based ERP solution designed specifically for government contractors.',
       primaryButton: 'Sign up- Its free',
