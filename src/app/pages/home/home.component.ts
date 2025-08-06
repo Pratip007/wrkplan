@@ -232,7 +232,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   // Hero content data
   private heroData: { [key: string]: HeroData } = {
     'dcaa-compliance': {
-      headline: 'The all-in-one Platform for </br> Contract Management and Project Accounting',
+      headline: 'The all-in-one Platform for  Contract Management and Project Accounting',
       subheadline: 'WrkPlan has everything you need to run your contract-based business. Manage your contracts, finances, and workforce in a single platform that\'s easy-to-use and delivers immediate value',
       description: 'WrkPlan has everything you need to run your contract-based business. Manage your contracts, finances, and workforce in a single platform that\'s easy-to-use and delivers immediate value.',
       primaryButton: 'Talk to Sales',
@@ -246,7 +246,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       ]
     },
     'contract-management': {
-      headline: 'DCAA Compliance Made Simple </br> The Complete ERP Platform for Government Contractors',
+      headline: 'DCAA Compliance Made Simple  The Complete ERP Platform for Government Contractors',
       subheadline: 'Streamline contract management, ensure DCAA compliance, and accelerate cash flow with WrkPlan\'s all-in-one cloud-based ERP solution designed specifically for government contractors',
       description: 'Streamline contract management, ensure DCAA compliance, and accelerate cash flow with WrkPlan\'s all-in-one cloud-based ERP solution designed specifically for government contractors.',
       primaryButton: 'Sign up- Its free',
