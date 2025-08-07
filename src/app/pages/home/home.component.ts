@@ -256,8 +256,8 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       headline: 'One Platform for  Contract Management and Project Accounting',
       subheadline: 'WrkPlan has everything you need to run your contract-based business. Manage your contracts, finances, and workforce in a single platform that\'s easy-to-use and delivers immediate value',
       description: 'WrkPlan has everything you need to run your contract-based business. Manage your contracts, finances, and workforce in a single platform that\'s easy-to-use and delivers immediate value.',
-      primaryButton: 'Talk to Sales',
-      secondaryButton: 'Download ebook',
+      primaryButton: 'Schedule a Free Consultation',
+      secondaryButton: 'Request Live Demo',
       additionalLink: 'Read our blog: How SYSTOLIC Inc. achieved 94% faster invoicing',
       image: '/assects/home/hero/dc.jpg',
       bulletPoints: [
@@ -270,8 +270,8 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       headline: ' The Complete ERP Platform for Government Contractors',
       subheadline: 'Streamline contract management, ensure DCAA compliance, and accelerate cash flow with WrkPlan\'s all-in-one cloud-based ERP solution designed specifically for government contractors',
       description: 'Streamline contract management, ensure DCAA compliance, and accelerate cash flow with WrkPlan\'s all-in-one cloud-based ERP solution designed specifically for government contractors.',
-      primaryButton: 'Sign up- Its free',
-      secondaryButton: 'Learn more',
+      primaryButton: 'Schedule a Free Consultation',
+      secondaryButton: 'Request Live Demo',
       additionalLink: 'See how Garcia Information Systems transformed their operations',
       image: '/assects/home/hero/Untitled design (4).png',
       bulletPoints: [
@@ -284,8 +284,8 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       headline: 'Streamline Payroll with Time, Labor & HR Integration',
       subheadline: 'Manage timesheets and expenses, as well as sub-contractors, in compliance with DCAA.',
       description: 'DCAA-compliant time tracking and employee management with integrated payroll and performance tracking.',
-      primaryButton: 'Schedule a Call',
-      secondaryButton: 'Get a Free Demo',
+      primaryButton: 'Schedule a Free Consultation',
+      secondaryButton: 'Request Live Demo',
       additionalLink: 'Read our blog: How SYSTOLIC Inc. achieved 94% faster invoicing',
       image: '/assects/home/hero/Untitled design (5).png',
       bulletPoints: [
