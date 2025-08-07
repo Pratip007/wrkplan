@@ -263,7 +263,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       primaryButton: 'Schedule a Free Consultation',
       secondaryButton: 'Request Live Demo',
       additionalLink: 'See how Garcia Information Systems transformed their operations',
-      image: '/assects/home/hero/Untitled design (4).png',
+      image: '/assects/home/hero/cmyk -n.jpg',
       bulletPoints: [
         'Integrate multiple contract types (CPFF, T&M, Fixed Price)',
         'Collaborate across teams with real-time funding visibility',
