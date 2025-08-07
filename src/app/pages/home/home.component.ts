@@ -263,7 +263,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       primaryButton: 'Schedule a Free Consultation',
       secondaryButton: 'Request Live Demo',
       additionalLink: 'See how Garcia Information Systems transformed their operations',
-      image: '/assects/home/hero/cmyk -n.jpg',
+      image: '/assects/home/hero/2.jpg',
       bulletPoints: [
         'Integrate multiple contract types (CPFF, T&M, Fixed Price)',
         'Collaborate across teams with real-time funding visibility',
@@ -277,7 +277,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       primaryButton: 'Schedule a Free Consultation',
       secondaryButton: 'Request Live Demo',
       additionalLink: 'Read our blog: How SYSTOLIC Inc. achieved 94% faster invoicing',
-      image: '/assects/home/hero/Untitled design (5).png',
+      image: '/assects/home/hero/1.jpg',
       bulletPoints: [
         'Time and Expense',
         'Payroll Integration',
