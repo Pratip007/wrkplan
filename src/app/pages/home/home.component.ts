@@ -140,7 +140,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
           description: 'Accelerate subcontractor billing and payment • Maintain compliance with clean timekeeping and approvals • Increase visibility into total labor costs—employee and subcontractor'
         }
       ],
-      image: '/assects/home/Solutions Overview/workforse management.png'
+      image: '/assects/home/Solutions Overview/sub contractor.jpg'
     },
     purchasing: {
       description: 'Procurement That Powers Your Projects. Efficiently manage direct materials, inventory items, and indirect purchases with real-time cost tracking.',
@@ -182,7 +182,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
           description: 'Match receipts to purchase orders'
         }
       ],
-      image: '/assects/home/Solutions Overview/contract management.webp'
+      image: '/assects/home/Solutions Overview/purches.jpg'
     },
     insights: {
       description: 'Procurement and Inventory—Simplified. WrkPlan streamlines the full purchasing lifecycle from requisition to PO and inventory tracking. Save time and eliminate bottlenecks.',
@@ -214,7 +214,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
           description: 'Delivery times, quality metrics, and pricing trends'
         }
       ],
-      image: '/assects/home/Solutions Overview/finance management.png'
+      image: '/assects/home/Solutions Overview/business inside.png'
     },
     incurred: {
       description: 'Incurred Cost Submission in Minutes. Automatically generate 16 ICE schedules (A–O) using your existing data. No spreadsheets, no scrambling, no stress.',
