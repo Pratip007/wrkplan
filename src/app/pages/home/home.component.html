@@ -556,7 +556,8 @@
               </div>
           </div>
       </div>
-      <div class="flex flex-wrap justify-center items-center gap-6 sm:gap-8 lg:gap-12 xl:gap-16 mb-8 sm:mb-12 lg:mb-16">
+      <!-- Desktop: Original Layout -->
+      <div class="hidden sm:flex flex-wrap justify-center items-center gap-6 sm:gap-8 lg:gap-12 xl:gap-16 mb-8 sm:mb-12 lg:mb-16">
           <div class="h-20 sm:h-24 lg:h-28 flex items-center">
               <img src="/assects/home/testimonials/GSA.svg" alt="GSA" class="h-16 sm:h-20 lg:h-24 object-contain">
           </div>
@@ -574,6 +575,31 @@
           </div>
           <div class="h-20 sm:h-24 lg:h-28 flex items-center">
               <img src="/assects/home/testimonials/Fedral_government-removebg-preview.png" alt="Federal Government" class="h-16 sm:h-20 lg:h-24 object-contain">
+          </div>
+      </div>
+
+      <!-- Mobile: 3+2 Layout -->
+      <div class="sm:hidden mb-8">
+          <!-- Top Row: 3 Images -->
+          <div class="flex justify-center items-center gap-6 mb-6">
+              <div class="h-18 flex items-center">
+                  <img src="/assects/home/testimonials/DCMA.PNG" alt="DCMA" class="h-14 object-contain">
+              </div>
+              <div class="h-18 flex items-center">
+                <img src="/assects/home/testimonials/GSA.svg" alt="GSA" class="h-14 object-contain">
+              </div>
+              <div class="h-18 flex items-center">
+                  <img src="/assects/home/testimonials/DFARS.png" alt="DFARS" class="h-14 object-contain">
+              </div>
+          </div>
+          <!-- Bottom Row: 2 Images -->
+          <div class="flex justify-center items-center gap-6">
+              <div class="h-18 flex items-center">
+                  <img src="/assects/home/testimonials/Defense_Contract_Audit_Agency.jpg" alt="Defense Contract Audit Agency" class="h-14 object-contain">
+              </div>
+              <div class="h-18 flex items-center">
+                  <img src="/assects/home/testimonials/US Defense.png" alt="US Defense" class="h-14 object-contain">
+              </div>
           </div>
       </div>
       <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
@@ -906,7 +932,7 @@
                     <button
                         (click)="nextMobileInsightsPage()"
                         [disabled]="currentMobileInsightsPage === totalMobileInsightsPages - 1"
-                        [class]="'w-12 h-12 rounded-full flex items-center justify-center transition-colors duration-200' + (currentMobileInsightsPage === totalMobileInsightsPages - 1 ? ' bg-gray-200 opacity-50 cursor-not-allowed' : ' bg-emerald-500 hover:bg-emerald-600')">
+                        [class]="'w-12 h-12 rounded-full flex items-center justify-center transition-colors duration-200' + (currentMobileInsightsPage === totalMobileInsightsPages - 1 ? ' bg-gray-200 opacity-50 cursor-not-allowed' : ' bg-[#91c754] hover:bg-emerald-600')">
                         <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                         </svg>
