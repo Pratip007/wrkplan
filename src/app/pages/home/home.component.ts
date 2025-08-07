@@ -143,75 +143,65 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       image: '/assects/home/Solutions Overview/sub contractor.jpg'
     },
     purchasing: {
-      description: 'Procurement That Powers Your Projects. Efficiently manage direct materials, inventory items, and indirect purchases with real-time cost tracking.',
+      description: 'Purchasing & Inventory: Self-Service Portal for Your Subcontractors',
       cta: 'Explore the Purchasing Module',
       sections: [
         {
-          id: 'purchasing-tracking',
-          title: 'Real-Time Inventory Tracking',
-          description: 'FIFO, LIFO, or average cost methods'
+          id: 'purchasing-portal',
+          title: 'Self-Service Portal for Your Subcontractors',
+          description: 'Enable subcontractors to log time and submit invoices directly through a secure portal - no emails, no delays, fully traceable.'
         },
         {
-          id: 'purchasing-warehouse',
-          title: 'Multi-Warehouse Support',
-          description: 'Track inventory across multiple locations'
+          id: 'purchasing-invoices',
+          title: 'Connect Invoices to POs and Time Automatically',
+          description: 'Ensure every invoice matches the right PO and timesheet - automated processing reduces delays and improves accuracy.'
         },
         {
-          id: 'purchasing-reorder',
-          title: 'Automated Reorder Points',
-          description: 'Set minimum quantities and standard reorder amounts'
+          id: 'purchasing-labor',
+          title: 'Audit-Ready Labor Allocation by Task',
+          description: 'Break down subcontractor labor by task and project for real-time insights, billing accuracy, and better cost control.'
         },
         {
-          id: 'purchasing-charging',
-          title: 'Direct Material Charging',
-          description: 'Automatically charge materials to specific projects'
+          id: 'purchasing-voucher',
+          title: 'Voucher Summary with Cash Flow Insights',
+          description: 'Track unpaid vouchers and aging payables to understand their impact on cash flow and maintain financial control.'
         },
         {
-          id: 'purchasing-vendor',
-          title: 'Vendor Management',
-          description: 'Maintain supplier information and purchase history'
-        },
-        {
-          id: 'purchasing-po',
-          title: 'Purchase Order Generation',
-          description: 'Create and track POs with approval workflows'
-        },
-        {
-          id: 'purchasing-receiving',
-          title: 'Receiving & Inspection',
-          description: 'Match receipts to purchase orders'
+          id: 'purchasing-compliance',
+          title: 'Stay Compliant with Subcontractor Audit Logs',
+          description: 'Ensure every subcontractor meets regulatory, contractual, and performance standards with continuous audit tracking and insights.'
         }
       ],
       image: '/assects/home/Solutions Overview/purches.jpg'
     },
     insights: {
-      description: 'Procurement and Inventory—Simplified. WrkPlan streamlines the full purchasing lifecycle from requisition to PO and inventory tracking. Save time and eliminate bottlenecks.',
+      description: 'Business Insights & Reports: Audit-Ready Inventory Valuation & Turnover',
       cta: 'Explore Business Insights',
       sections: [
         {
           id: 'insights-inventory',
-          title: 'Inventory Valuation',
-          description: 'Real-time inventory values and turnover analysis'
+          title: 'Audit-Ready Inventory Valuation & Turnover',
+          description: 'Ensure precise inventory valuation with real-time data on stock levels, aging, and movement - critical for compliance and strategic planning.'
         },
         {
           id: 'insights-purchase',
-          title: 'Purchase Analysis',
-          description: 'Spending by vendor, category, and project'
+          title: 'Analyze Purchases by Source and Purpose',
+          description: 'Enable smarter purchasing decisions with deep insights into how, where, and why your organization spends across every project.'
         },
         {
           id: 'insights-aging',
-          title: 'Inventory Aging',
-          description: 'Identify slow-moving or obsolete inventory'
+          title: 'Identify Slow-Moving or Idle Inventory',
+          description: 'Prevent overstocking and financial loss by identifying inventory at risk of obsolescence through automated aging analysis.'
         },
         {
           id: 'insights-variance',
-          title: 'Cost Variance Reports',
-          description: 'Compare actual vs. budgeted material costs'
+          title: 'Compare Budgeted and Actual Costs Easily',
+          description: 'Compare actual material costs against budgets in real time - spot overruns early, stay compliant, and keep projects financially on track.'
         },
         {
           id: 'insights-vendor',
-          title: 'Vendor Performance',
-          description: 'Delivery times, quality metrics, and pricing trends'
+          title: 'Evaluate Vendors on Delivery, Quality & Price',
+          description: 'Analyze vendor history with real-time data on fulfillment, quality, and pricing to reduce risk and strengthen supplier partnerships.'
         }
       ],
       image: '/assects/home/Solutions Overview/business inside.png'
