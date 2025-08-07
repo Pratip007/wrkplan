@@ -539,7 +539,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   private updateInsightsCarousel() {
-    const container = document.getElementById('cards-container');
+    const container = document.getElementById('desktop-cards-container');
     if (container) {
       const translateX = -this.currentInsightsPage * 100;
       container.style.transform = `translateX(${translateX}%)`;
@@ -555,7 +555,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   private setupTouchSupport() {
-    const container = document.getElementById('cards-container');
+    const container = document.getElementById('desktop-cards-container');
     if (container) {
       let startX = 0;
       let endX = 0;
