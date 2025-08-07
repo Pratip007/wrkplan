@@ -531,7 +531,7 @@
                               <p class="text-white text-sm lg:text-base leading-relaxed" [innerHTML]="currentVideoData.description"></p>
                           </div>
                           <button class="flex items-center gap-3 bg-white bg-opacity-90 hover:bg-opacity-100 text-gray-900 px-8 py-4 rounded-full font-medium transition-all duration-200 shadow-lg hover:shadow-xl" (click)="playStoryVideo()">
-                              <div class="w-10 h-10 bg-[#73ba43] rounded-full flex items-center justify-center">
+                              <div class="w-10 h-10 bg-[#91c754] rounded-full flex items-center justify-center">
                                   <svg class="w-5 h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
                                       <path d="M8 5v14l11-7z"/>
                                   </svg>
@@ -546,7 +546,7 @@
               <div *ngIf="!isVideoPlaying" class="lg:hidden absolute inset-0 bg-cover bg-center opacity-80" [style.background-image]="currentVideoData.backgroundImage"></div>
               <div *ngIf="!isVideoPlaying" class="lg:hidden absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
                   <button class="flex items-center gap-2 bg-white bg-opacity-90 hover:bg-opacity-100 text-gray-900 px-4 py-2 rounded-full font-medium transition-all duration-200 shadow-lg hover:shadow-xl" (click)="playStoryVideo()">
-                      <div class="w-8 h-8 bg-[#73ba43] rounded-full flex items-center justify-center">
+                      <div class="w-8 h-8 bg-[#91c754] rounded-full flex items-center justify-center">
                           <svg class="w-4 h-4 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
                               <path d="M8 5v14l11-7z"/>
                           </svg>
@@ -899,7 +899,7 @@
                     <button
                         (click)="nextInsightsPage()"
                         [disabled]="currentInsightsPage === totalInsightsPages - 1"
-                        [class]="'w-12 h-12 rounded-full flex items-center justify-center transition-colors duration-200' + (currentInsightsPage === totalInsightsPages - 1 ? ' bg-gray-200 opacity-50 cursor-not-allowed' : ' bg-[#73ba43] hover:bg-emerald-600')">
+                        [class]="'w-12 h-12 rounded-full flex items-center justify-center transition-colors duration-200' + (currentInsightsPage === totalInsightsPages - 1 ? ' bg-gray-200 opacity-50 cursor-not-allowed' : ' bg-[#91c754] hover:bg-emerald-600')">
                         <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                         </svg>
