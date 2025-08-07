@@ -498,6 +498,13 @@
               </button>
           </div>
       </div>
+
+      <!-- Mobile: Title and Description above video -->
+      <div class="lg:hidden mb-6">
+          <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 leading-tight">{{ currentVideoData.title }}</h3>
+          <p class="text-base text-gray-600 leading-relaxed" [innerHTML]="currentVideoData.description"></p>
+      </div>
+
       <div class="relative rounded-2xl overflow-hidden shadow-2xl mb-12">
           <div class="relative aspect-video bg-gradient-to-br from-gray-900 via-blue-900 to-gray-800">
               <!-- Video Element (Hidden by default) -->
@@ -511,9 +518,9 @@
                   Your browser does not support the video tag.
               </video>
 
-              <!-- Background and Play Button (Shown when video is not playing) -->
-              <div *ngIf="!isVideoPlaying" class="absolute inset-0 bg-cover bg-center opacity-80" [style.background-image]="currentVideoData.backgroundImage"></div>
-              <div *ngIf="!isVideoPlaying" class="absolute inset-0 bg-black bg-opacity-40">
+              <!-- Desktop: Background and Play Button (Shown when video is not playing) -->
+              <div *ngIf="!isVideoPlaying" class="hidden lg:block absolute inset-0 bg-cover bg-center opacity-80" [style.background-image]="currentVideoData.backgroundImage"></div>
+              <div *ngIf="!isVideoPlaying" class="hidden lg:block absolute inset-0 bg-black bg-opacity-40">
                   <div class="flex flex-col justify-between h-full p-8 lg:p-12">
                       <div>
                           <h3 class="text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight">{{ currentVideoData.title }}</h3>
@@ -533,26 +540,39 @@
                       </div>
                   </div>
               </div>
+
+              <!-- Mobile: Background and Centered Play Button -->
+              <div *ngIf="!isVideoPlaying" class="lg:hidden absolute inset-0 bg-cover bg-center opacity-80" [style.background-image]="currentVideoData.backgroundImage"></div>
+              <div *ngIf="!isVideoPlaying" class="lg:hidden absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                  <button class="flex items-center gap-2 bg-white bg-opacity-90 hover:bg-opacity-100 text-gray-900 px-4 py-2 rounded-full font-medium transition-all duration-200 shadow-lg hover:shadow-xl" (click)="playStoryVideo()">
+                      <div class="w-8 h-8 bg-[#73ba43] rounded-full flex items-center justify-center">
+                          <svg class="w-4 h-4 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M8 5v14l11-7z"/>
+                          </svg>
+                      </div>
+                      <span class="text-xs">Play video ({{ currentVideoData.videoTime }})</span>
+                  </button>
+              </div>
           </div>
       </div>
       <div class="flex flex-wrap justify-center items-center gap-6 sm:gap-8 lg:gap-12 xl:gap-16 mb-8 sm:mb-12 lg:mb-16">
           <div class="h-20 sm:h-24 lg:h-28 flex items-center">
-              <img src="/assets/home/testimonials/GSA.svg" alt="GSA" class="h-16 sm:h-20 lg:h-24 object-contain">
+              <img src="/assects/home/testimonials/GSA.svg" alt="GSA" class="h-16 sm:h-20 lg:h-24 object-contain">
           </div>
           <div class="h-20 sm:h-24 lg:h-28 flex items-center">
-              <img src="/assets/home/testimonials/DCMA.PNG" alt="DCMA" class="h-16 sm:h-20 lg:h-24 object-contain">
+              <img src="/assects/home/testimonials/DCMA.PNG" alt="DCMA" class="h-16 sm:h-20 lg:h-24 object-contain">
           </div>
           <div class="h-20 sm:h-24 lg:h-28 flex items-center">
-              <img src="/assets/home/testimonials/DFARS.png" alt="DFARS" class="h-16 sm:h-20 lg:h-24 object-contain">
+              <img src="/assects/home/testimonials/DFARS.png" alt="DFARS" class="h-16 sm:h-20 lg:h-24 object-contain">
           </div>
           <div class="h-20 sm:h-24 lg:h-28 flex items-center">
-              <img src="/assets/home/testimonials/Defense_Contract_Audit_Agency.jpg" alt="Defense Contract Audit Agency" class="h-16 sm:h-20 lg:h-24 object-contain">
+              <img src="/assects/home/testimonials/Defense_Contract_Audit_Agency.jpg" alt="Defense Contract Audit Agency" class="h-16 sm:h-20 lg:h-24 object-contain">
           </div>
           <div class="h-20 sm:h-24 lg:h-28 flex items-center">
-              <img src="/assets/home/testimonials/US Defense.png" alt="US Defense" class="h-16 sm:h-20 lg:h-24 object-contain">
+              <img src="/assects/home/testimonials/US Defense.png" alt="US Defense" class="h-16 sm:h-20 lg:h-24 object-contain">
           </div>
           <div class="h-20 sm:h-24 lg:h-28 flex items-center">
-              <img src="/assets/home/testimonials/Fedral_government-removebg-preview.png" alt="Federal Government" class="h-16 sm:h-20 lg:h-24 object-contain">
+              <img src="/assects/home/testimonials/Fedral_government-removebg-preview.png" alt="Federal Government" class="h-16 sm:h-20 lg:h-24 object-contain">
           </div>
       </div>
       <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
